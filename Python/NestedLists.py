@@ -59,7 +59,9 @@ if __name__ == '__main__':
         score = float(input())
         students.append([name, score])
 numlist=[i[1] for i in students]   
-numlist.remove(min(numlist))
+mi=min(numlist)
+while min(numlist)==mi:
+    numlist.remove(mi)
 secondlast=min(numlist)
 names=[name[0] for name in students if name[1]==secondlast]
 for i in sorted(names):
