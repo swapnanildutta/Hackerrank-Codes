@@ -1,0 +1,1285 @@
+Day1: (Arrays)
+
+1. Find the duplicate in an array of N integers. 
+->
+*) consider there are more than 2 number repeating
+Approach 1) use hashmap but its o(n) space
+Approach 2) since array is in range 1 to n inclusive we minus at index of arr[arr[i]] *= -1;
+		and check if current is minus insert to set because multiple same ans possible.
+
+		for(int i=0; i<n; i++){
+            	    int index = abs(nums[i])-1;
+	            if(nums[index] < 0)
+        	        ans.push_back(index+1);            
+            	    nums[index] *= -1;
+        	}
+
+Approach 3) use current array as hashmap.
+		add n to current index.
+		Ex: a[a[i]%n] += n; // add n to current index of index in array
+		then again loop array 
+		
+		for (int i = 0; i < n; i++)  
+    			if (arr[i] >= n*2)  
+        		 	cout << i << " " << endl; 
+
+Approach 4) *Trickiest approach* supppose array is readonly so above all approach fails here.
+-> maintain 2 pointer fast and slow and same code as find loop and that point in linklist
+	so multiple occur no having loop there.
+
+	int slow = a[0];
+	int fast = a[a[0]];
+	while(slow != fast) {
+		slow=a[slow];
+		fast=a[a[fast]];
+	}
+	fast=0;
+	while(slow != fast) {
+		slow=a[slow];
+		fast=a[fast];
+	}
+	return slow;
+       		 
+--------------------------------------------------------------------------   
+
+2. Sort an array of 0’s 1’s 2’s without using extra space or sorting algo 
+
+Approach 1) count 0's 1's and 2's and put it to array (2 traverse array)
+Approach 2) dutch nation flag algo
+	int left=0, mid=0, right=n-1;
+	// loop in array
+	while(mid <= right) {
+		switch(a[mid]) {
+			case 0 :
+				swap(a[left++], a[mid++]); break;
+			case 1:	
+				mid++; break;
+			case 2:
+				swap(a[mid], a[right--]); break; // no mid++ because may mid swap with left later
+		}
+	}
+
+----------------------------------------------------------------------------
+
+3. Repeat and Missing Number 
+Range is 1 to N in array
+
+-> in given array 1 number is missing and 1 is repeating find both number
+ex: {1, 3, 1} -> 1 repeat , 2 missing <- ans
+
+Approach 1) use hashmap to find repeating number;
+ 		then sum all A[i] number minus repeated number := res 
+		then sum n(n+1)/2 minus - res
+		we get missing number
+
+Approach 2) maths:)
+		sum all N number := sum_N = n*(n+1)/2
+		sum of product of all number := sum_Nsq = n*(n+1)*(2n+1)/6;
+		two number we find X=repeated , Y=missing
+		minus sum_N from array given we get: (x-y)
+		minus sum_Nsq from (a[i]*a[i]) we get: (x^2 - y^2) := (x+y)*(x-y)
+		Now we have equation : x+y=sum_N ans (x+y)(x-y)=sum_Nsq
+		x=(Sum_N + Sum_NSq/Sum_N)/2; // (x-y) + ((x-y)(x+y))/(x-y) := (x-y)+(x+y) := 2x
+		y=x-Sum_N
+
+// watch techDose video
+-----------------------------------------------------------------------------
+
+4. Merge two sorted Arrays without extra space 
+
+// techdose : https://www.youtube.com/watch?v=NWMcj5QFW74 <- very good 
+------------------------------------------------------------------------------
+5. Kadane’s Algorithm 
+
+-> just check current and prev move forward and maintain max
+
+int max_here=a[0];
+int max_ans=a[0];
+
+for(int i=1; i<n; i++) {
+	max_here += a[i];
+	// main line here if prev sum less then current element then choose only current element
+	if(max_here < a[i])
+		max_here=a[i];
+	max_ans=max(max_ans, max_here);
+}
+return max_ans;
+
+-------------------------------------------------------------------------------
+6. Merge Overlapping Subintervals 
+
+// very simple approach is priority_queue and stack
+// insert all in minHeap with 'a'->start and 'e'->end tag
+// then pop from heap
+// if a tag arrive push to stack and e arrive pop from stack and is it last one means stack is empty
+// then consider that as pair else continue
+
+	vector<vector<int>> ans;        
+        priority_queue< pi, vector<pi>, greater<pi> > pq;        
+        for(auto &x:intervals){
+            pq.push({x[0],'a'});
+            pq.push({x[1],'e'});
+        }        
+        stack<ll> st;        
+        while(!pq.empty()){
+            auto cur = pq.top();
+            pq.pop();            
+            if(cur.second == 'a') {
+                st.push(cur.first);
+            } else {
+                ll stemp = st.top();
+                st.pop();
+                if(st.empty())
+                    ans.push_back({stemp, cur.first});
+            }            
+        }       
+        return ans; 
+
+Approach 2)
+	- sort all by start time
+	- then traverse if first then insert
+	- check merge list last >= curr.first then mergelist.last = max(merge.last, cur.last);
+
+----------------------------------------------------------------------------------------
+
+Day 2 : 
+
+1. Set Matrix Zeros 
+-> given row and col 1 and 0 set all row and col to 1 having 1
+
+[1, 0]		[1, 1]
+[0, 0]		[1, 0]
+
+Approach 1:
+use extra array and set 1 to row and col on that row[] and col[] array
+
+Approach 2:
+	use two flag var and set it true if first row and col having 1
+	that iterate all row col A[i][j].
+	if A[i][j]==1 then set A[i][0]=A[0][j]=1
+	then iterate all array index [1,1] then if corresponding row or col 1 set A[i][j]=1
+	then if row flag true set row 1
+	col flag if true set col 1
+
+------------------------------------------------------------------------------
+2. Pascal Triangle 
+
+just make sure current [i][j] = [i-1][j-1]+[i-1][j]
+
+-------------------------------------------------------------------------------
+3. Next Permutation 
+
+next_permutation(); STL....
+
+--------------------------------------------------------------------------------
+4. Inversion of Array (Using Merge Sort) 
+
+inversion means a[i]>a[j] && i<j
+Techdosh video
+	
+Merge Sort: O(Nlogn)
+Binary Index Tree : O(N) ~Fenwick tree.
+-------------------------------------------------------------------------------
+
+5. Stock Buy and Sell 
+
+-> if asked atmost 1 transaction
+-> use approach if min value arrived change min to current else try to sell on current day
+
+	int minprice = INT_MAX;
+        int maxprofit = 0;        
+        for(int i=0; i<prices.size(); i++){
+            if(prices[i] < minprice)
+                minprice = prices[i];
+            else if(prices[i] - minprice > maxprofit)
+                maxprofit = prices[i]-minprice;
+        }
+        return maxprofit;
+
+
+-> if use as many transaction we have 2 approaches
+Approach 1) pick vally approack
+-> try min val from first which i+1 is > then current
+-> try to find max val where i+i > current
+-> add diff to profit
+
+Approach 2) insted of pick vally we direct sell if we get some profit endup we have same profit as we have in Approach 1.
+
+	int sum=0;
+        for(int i=1; i<prices.size(); i++){
+            if( prices[i] > prices[i-1] )
+                sum += prices[i] - prices[i-1];
+        }
+        return sum;
+
+--------------------------------------------------------------------------------------------
+
+6. Rotate Matrix  
+
+left read from "Creaking coding interview" approach in place
+-> and try to do all matrix related algo rotate 180, 90 deg.
+
+---------------------------------------------------------------------------------------------
+7. Minimum Window Substring
+-> find minimum window length that having all char of pattern in any order.
+String = "ADOBECODEBANC"
+Pattern = "ABC"
+Ans : "BANC"
+
+so maintain hash of pattern and cur string.
+then if cur_str window contain whole pattern try to reduce from start.
+
+code :
+	
+string minWindow(string s, string t) {        
+        int len1 = s.size(), len2 = t.size();
+        
+        int hash_pat[266]={0};
+        int hash_str[266]={0};
+        
+        if(len1 < len2)
+            return "";
+        
+        for(auto c : t)
+            hash_pat[c]++;        
+        
+        int count=0;
+        int start=0, start_index=-1, min_len=INT_MAX;
+        
+        for(int j=0; j<len1; j++) {
+            hash_str[s[j]]++;
+            
+            // count valid choosen character
+            if(hash_pat[s[j]] != 0 && hash_str[s[j]] <= hash_pat[s[j]])
+                count++;
+            
+            // pattern found
+            if(count == len2) {
+                
+                while(hash_pat[s[start]]==0 || hash_pat[s[start]] < hash_str[s[start]]) {
+                    if(hash_pat[s[start]] < hash_str[s[start]])
+                        hash_str[s[start]]--;
+                    start++;
+                }
+                
+                int cur = j-start+1;
+                if(cur < min_len) {
+                    min_len=cur;
+                    start_index=start;
+                }
+                
+            }            
+        }        
+        if(start_index == -1)
+            return "";        
+        return s.substr(start_index, min_len);        
+    }
+
+----------------------------------------------------------------------------------------------
+Day 3:
+
+1. Excel Column Number 
+-> in excel given number represent corresponding excel number
+A:1, Z:26, AY:51
+
+we use binary represntation system with base 26 because 26 char in alphabet
+	
+    // take integer with base 26
+    while (n) { 
+        arr[i] = n % 26; 
+        n = n / 26; 
+        i++; 
+    } 
+  
+    // Step 2: Getting rid of 0, as 0 is 
+    // not part of number system 
+    for (int j = 0; j < i - 1; j++) { 
+        if (arr[j] <= 0) { 
+            arr[j] += 26; 
+            arr[j + 1] = arr[j + 1] - 1; 
+        } 
+    } 
+  
+    for (int j = i; j >= 0; j--) { 
+        if (arr[j] > 0) 
+            cout << (char)('A' + (arr[j] - 1)); // -1 because we added 26 to get rid of 0
+    } 
+
+
+--- 2nd varitation of this reverse
+Given AB->return excel col number
+	
+    int result = 0; 
+    for (const auto& c : s) // given string convert number.
+    { 
+        result *= 26; 
+        result += c  - 'A' + 1; // +1 because we dont need zero
+    }   
+    return result;
+
+-----------------------------------------------------------------------
+
+2. Find n^x in log N 
+
+-> Binary exponensiation
+
+-----------------------------------------------------------------------
+3. Count trailing zeros in factorial of a number
+
+Approach : we just prime factorize it and count 5
+-> 5 and 2 = 5*2=10 so, we get trailling zero only if we have 5 and 2 as prime factor
+-> so min(5, 2) count is our ans.
+-> we obeserve that number of 5 always less than number of 2
+-> so simple count number of 5 and we done.
+
+int findTrailingZeros(int n) { 
+    // Initialize result 
+    int count = 0;   
+    // Keep dividing n by powers of  
+    // 5 and update count 
+    for (int i = 5; n / i >= 1; i *= 5) 
+        count += n / i;   
+    return count; 
+} 
+
+---------------------------------------------------------------------------
+
+4. Find GCD in Log N
+: Euclidian GCD algo __gcd();
+
+----------------------------------------------------------------------------
+
+5. Grid Unique Paths 
+with obstacles in way count unique paths
+left...
+----------------------------------------------------------------------------
+
+6. Go through Puzzles from GFG (Search on own) 
+
+----------------------------------------------------------------------------
+
+Day4: (Hashing)
+---------
+1. 2 Sum problem
+
+Approach 1) : 2 loop i to n and j=i+1 to n find a[i]+a[j] == sum O(n^2)
+Approach 2) : hashing approach insert value in hashtable check sum-a[i] present in hash
+		done in one traversal O(N) approach and O(N) space;
+Approach 3) : sort array and use two pointer to match O(N logn);
+----------------------------------------------------------------------------
+2. 4 sum problem
+
+Approach :) sort array
+		loop i=0 to n
+		loop j=i+1 to n
+		then find 2 number that sum eq to a[i]+a[j]+a[left]+a[right]==sum
+		problem reduce to 2 sum
+		also check for duplicate number skip array i, j, left, right for duplicate val
+		complexity O(n^3)
+		
+------------------------------------------------------------------------------
+3. Longest Consecutive Sequence 
+-> given unsorted array find longest length of consecutive array.
+ex: {1, 9, 3, 10, 4, 20, 2} Ans: 4 which is {1, 2, 3, 4}
+
+Approach 1:) sort the array and calculate contionus element
+	sort(a, a+n);
+	int ans=0;
+	int count=1;
+	for(int i=0; i<n; i++) {
+		if(i>0 && a[i]==a[i-1]+1) count++;
+		else count=1;
+		ans=max(ans, count);
+	}
+
+Approach 2: hashing
+	put all element into set
+	then find first occur element and check continously next and maintain max ans
+
+	unordered_set<int> s;
+	for(int i=0; i<n; i++) 
+		s.insert(a[i]);
+
+	for(int i=0; i<n; i++) {
+		if(s.find(a[i]-1) == s.end()) // this means this is first element	
+		{
+			int j=a[i], count=0;
+			while(s.find(j)!=s.end()) j++, count++;
+			ans=max(ans, count);
+		}	
+	}
+
+
+--------------------------------------------------------------------------------------------
+
+4. Longest Subarray with 0 sum 
+
+Approach 1:) bruteforce
+	use 2 loops and sum a[i]+a[j] if it 0 maintain max and update according
+	for(int i=0; i<n; i++) {
+		int sum=0;
+		for(int j=i; j<n; j++){
+			sum += a[j];
+			if(sum == 0)	
+				ans=max(ans, j-i+1); // max length of subarray
+		}
+	}	
+
+Approach 2) hashing
+	use prefix sum with hashmap.
+	prefix sum array and insert into map with corresponding index
+	and if current prefix sum already present in map that means sum between that prefix and current is zero.
+	
+	int pref=0; int ans=0;
+	unordered_map<int, int> mp;
+	for(int i=0; i<n; i++) {
+		if(a[i]==0 && ans==0) ans=1;		
+		pref += a[i];		
+		// means array sum zero from index 0 so i+1
+		if(pref == 0)
+			ans=i+1;
+		// sum found in earlier
+		if(mp.find(pref) != mp.end()){
+			ans=max(ans, i-mp[sum]);
+		} else {
+			mp[sum]=i;
+		}
+	}
+	
+---------------------------------------------------------------------------------
+5. Count number of subarrays with given XOR(this clears a lot of problems) 
+
+-> count no of subarray having Xor given m.
+ex:{ 4, 2, 2, 6, 4 };   Ans : 4
+
+approach 1) bruteforce :
+	make 2 loop and continue xor and check if xor == m then count 
+
+	int ans=0, m=6;
+	for(int i=0; i<n; i++) {
+		int xor=0;
+		for(int j=i; j<n; j++) {
+			xor = xor ^ a[j];
+			if(xor==m)	
+				ans++;
+		}	
+	}
+
+Approach 2)
+	make xorarray prefix as actual array xor
+	loop on array temp = xor[i]^m and add to ans
+	if xor from start to current = m also add to ans;
+
+	long long ans = 0; 
+	int* xorArr = new int[n]; 
+    
+	unordered_map<int, int> mp;
+
+ 
+    
+    // make Xor prefix
+
+	 xorArr[0] = arr[0];
+ 
+    
+    for (int i = 1; i < n; i++)
+	 
+        xorArr[i] = xorArr[i - 1] ^ arr[i];
+
+ 
+  
+   for (int i = 0; i < n; i++) {
+ 
+        int tmp = m ^ xorArr[i]; // current xor means xor from i=0 to cur and ^ m to it
+ 
+        ans = ans + ((long long)mp[tmp]); // add if it in map as ans
+
+	 // xor from index=0 to cur is m add to ans 
+ 
+    
+    if (xorArr[i] == m)
+ 
+            ans++;
+
+ 
+  
+      mp[xorArr[i]]++;
+ 
+    }
+ 
+    cout << ans << "\n";
+
+-------------------------------------------------------------------------------------------
+
+6. Longest substring without repeat 
+
+Approach 1) simple easy sliding window technique.
+	start from 0 index with start=0, cur=0 point ans=0
+	start from start to end
+	if current char present in set remove from start else add to curr
+	unordered_set<char> s; str="given"
+
+	while(cur < n && start < n) {
+		if(s.find(str[cur]) == s.end()) {
+			s.insert(str[cur]);
+			cur++;
+			ans=max(ans, cur-start);
+		} else {
+			s.erase(str[start]);
+			start++;
+		}
+	}
+	return ans;
+
+
+Approach 2) simplier we use array of 256 (all possible char) so more optimize than set
+		lastindex[256]={}; // set all val to -1
+		int i=0, res=0; 
+		for(int j=0; j<n; j++) {
+			i=max(i, lastindex[str[j]] + 1);
+			res=max(res, j-i+1);
+			lastindex[str[j]] = j;
+		}
+		return res;
+		
+---------------------------------------------------------------------------------------
+
+Day5: (LinkedList) 
+1. Reverse a LinkedList 
+
+Approach 1) we can just print it by recuesion
+Approach 2) Actual reverse linklist by changing next
+
+Node* cur, prev=NULL, next;
+temp=head;
+
+while(cur!=NULL) {
+	next=cur->next;
+	cur->next=prev;
+	prev=cur;
+	cur=next;
+}
+return prev; // new head
+
+-------------------------------------------------------------------------------
+2. Find middle of LinkedList 
+
+Approach 1) count all element in linklist.
+		second traverse and find middle
+
+Approach 2) use 2 pointer fast and slow.
+		fast 2 step and slow 1 step when fast reach to end slow reach to middle return it.
+
+-------------------------------------------------------------------------------
+3. Merge two sorted Linked List 
+
+-> simple merge as merge sort
+
+-------------------------------------------------------------------------------
+4. Remove N-th node from back of LinkedList
+
+Approach 1) count all element then 2nd traverse delete that element
+Approach 2) use 2 pointer first move n then start second with head
+		move 2 pointer with single step when 1st reach end 2nd reach dest node to delete
+
+------------------------------------------------------------------------------- 
+5. Delete a given Node when a node is given. (0(1) solution) 
+
+-> 1 simple method we delete cur node and we not have head pointer.
+	we copy next node to cur and delete next node.
+	Warning::: we can't use when given node is tail or last node in singly LL.
+
+------------------------------------------------------------------------------- 
+6. Add two numbers as LinkedList  
+
+Approach 1) contvert linklist to number sum convert linklist back.
+
+Approach 2) make new linklist and maintain 
+
+	ListNode dummy = new ListNode(0);
+        int carry = 0;
+        ListNode p = l1, q = l2, curr = dummy;
+
+        while(p != null || q != null){
+            
+            int x = (p != null) ? p.val : 0;
+            int y = (q != null) ? q.val : 0;
+            
+            int sum = x+y+carry;
+            carry = sum/10;
+            
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+            
+            if(p != null) p = p.next;
+            if(q != null) q = q.next;
+            
+        }
+        if(carry > 0)
+            curr.next = new ListNode(carry);
+        
+        return dummy.next;
+
+------------------------------------------------------------------------------------
+
+Day6: 
+--------
+1. Find intersection point of Y LinkedList 
+Approach 1) brute force approach use 2 loop and find intersact point.
+Approach 2) traverse first listlist and mark it as visited set value negative
+		and again traverse 2nd linklist and negative value found return it.
+Approach 3) travese first add address to map then traverse 2nd and check address already present in map.
+Approach 4) count list 1 node A, count list 2 node B. take d = abs(A-B).
+		now bigger list move d steps.
+		move both 2 end and check any point it is same.
+
+
+-------------------------------------------------------------------------------------
+2. Check if a LinkedList is palindrome or not. 
+
+Approach 1) convert into array and check array is pelindrom or not
+Approach 2) push into stack all int 1st traversal.
+		again traverse and check from stack top and keep pop.
+Approach 3) Find middle of linklist.
+		revese linklist from middle to end
+		check firsthalf and second half is same
+
+------------------------------------------------------------------------------------
+3. Reverse a LinkedList in groups. 
+
+Node *reverse (Node *head, int k)  
+{  
+    Node* current = head;  
+    Node* next = NULL;  
+    Node* prev = NULL;  
+    int count = 0;  
+      
+    /*reverse first k nodes of the linked list */
+    while (current != NULL && count < k)  
+    {  
+        next = current->next;  
+        current->next = prev;  
+        prev = current;  
+        current = next;  
+        count++;  
+    }  
+      
+    /* next is now a pointer to (k+1)th node  
+    Recursively call for the list starting from current.  
+    And make rest of the list as next of first node */
+    if (next != NULL)  
+    head->next = reverse(next, k);  
+  
+    /* prev is new head of the input list */
+    return prev;  
+}  
+
+----------------------------------------------------------------------------------
+4. Detect a cycle and removing loop(two different questions and same concept) 
+
+-> detect cycle use 2 pointer fast and slow. when both meet that means there is cycle in linklist.
+	and to remove that when both keep that point and start other point from first.
+	so, now we have 2 point first and intersact. traverse one step from both and check next node is same or not is same then remove next point to null.
+
+-----------------------------------------------------------------------------------
+5. Flattening of a LinkedList 
+
+       5 -> 10 -> 19 -> 28
+       |    |     |     |
+       V    V     V     V
+       7    20    22    35
+       |          |     |
+       V          V     V
+       8          50    40
+       |                |
+       V                V
+       30               45
+
+	
+-> make: 5->7->8->10->19->20->22->28->30->35->40->45->50. keep sorted array.
+
+Approach 1) use mergesort with recursion.
+	
+Node* merge( Node* a, Node* b ) 
+{ 
+    // If first list is empty, the second list is result 
+    if (a == NULL) 
+        return b; 
+  
+    // If second list is empty, the second list is result 
+    if (b == NULL) 
+        return a; 
+  
+    // Compare the data members of head nodes of both lists 
+    // and put the smaller one in result 
+    Node* result; 
+    if (a->data < b->data) 
+    { 
+        result = a; 
+        result->down = merge( a->down, b ); 
+    } 
+    else
+    { 
+        result = b; 
+        result->down = merge( a, b->down ); 
+    } 
+  
+    result->right = NULL; 
+    return result; 
+} 
+  
+// The main function that flattens a given linked list 
+Node* flatten (Node* root) 
+{ 
+    // Base cases 
+    if (root == NULL || root->right == NULL) 
+        return root; 
+  
+    // Merge this list with the list on right side 
+    return merge( root, flatten(root->right) ); 
+} 
+
+
+--------
+Approach 2) put everything into set and make new linklist.
+
+-----------------------------------------------------------------------------------
+6. Rotate a LinkedList 
+
+-> rotate by k just find kth node then go to end of LL.
+	end->next=head;
+	head=kthnode
+	kthnode->next=null
+
+-----------------------------------------------------------------------------------
+7. Clone a Linked List with random and next pointer. 
+-> Given a link list having 2 pointer next and random.
+
+-> Approach 1) use hashmap O(N) space approach
+	
+ Node* copyRandomList(Node* head) {
+    
+        unordered_map<Node*, Node*> m;
+        Node* temp = head;
+        
+        while(temp != nullptr){
+            m[temp] = new Node(temp->val);
+            temp = temp->next;
+        }
+        
+        temp = head;
+        
+        while(temp != nullptr){
+            // cur->next = already->next
+            m[temp]->next = m[temp->next];
+            m[temp]->random = m[temp->random];
+            
+            temp = temp->next;
+        }
+        return m[head];
+    }
+
+Approach 2) use O(1) extra space
+-> we have list original we add all dummy node in between original list. now perform below for all
+-> original->next->random= original->random->next;
+-> now we take out all dummy node so our ans is ready;
+
+original->next = original->next->next;
+copy->next = copy->next->next;			
+-----------------------------------------------------------------------------------------
+
+Day7: (2-pointer) 
+-----------------------
+1. Merge two sorted LinkedLists
+-> make 2 pointer and new linklist merge in sorted form
+------------------------------------------------------------------------------------------
+
+2. Find the starting point of the loop.
+-> already done. fast and slow pointer approach, and once find loop set fast=head and move
+one fast and slow check if same you done.
+
+------------------------------------------------------------------------------------------
+
+3. 3 sum 
+-> already done.
+-> sort the array then loop 0 to n choose current i then find other 2 element such that sum all is target.
+
+	vector<vector<int>> ans;        
+        if(nums.size() < 2)
+            return ans;
+        sort(nums.begin(), nums.end());
+       
+        for(int i=0; i<nums.size()-2; i++){
+            
+            if(i == 0 || (i > 0 && nums[i] != nums[i-1] )){ 
+            
+                int start=i+1;
+                int end=nums.size()-1;
+                int sum = 0-nums[i]; // here we want sum=0 so 0-nums[i]
+                    
+                while(start < end){
+                    if(nums[start] + nums[end] == sum){
+                        vector<int> cur = {nums[i], nums[start], nums[end]};
+                        ans.push_back(cur);
+                        
+                        while(start < end && nums[start] == nums[start+1]) start++;
+                        while(start < end && nums[end] == nums[end-1]) end--;
+                        
+                        start++;
+                        end--;
+                    } else if(nums[start] + nums[end] > sum){
+                        end--;
+                    } else {
+                        start++;
+                    }
+                }
+                
+            }            
+        }
+        
+        return ans;
+
+----------------------------------------------------------------------------------------------
+
+4. Trapping rainwater 
+-> find all area to contain water.
+-> find previous max prefix array and next max suf array
+-> find min(prev_max, suf_max) - cur_size; 
+
+----------------------------------------------------------------------------------------------
+
+5. Remove Duplicate from Sorted array
+-> make 2 pointer 1 current running i and second j if current not equal j add array j
+
+-----------------------------------------------------------------------------------------------
+
+6. Max continuous number of 1’s 
+-> count consecutive 1s two pointers
+
+----------------------------------------------------------------------------------------------
+Day8: (Greedy)
+
+1. N meeting in one room
+-> we have given start and end time of meeting and find maximum metting can we do in one room.
+-> sort meeting by end time and check cur start>=prev_end then count++;
+
+----------------------------------------------------------------------------------------------
+2. Activity Selection
+-> we given start and end time of some activity we choose max activity.
+-> sort activity by end time. and choose first activity then start from 2nd activity.
+	check cur_start >= prev_end then we can choose that activity.
+-> we can also use priority_queue for this.
+
+----------------------------------------------------------------------------------------------
+3. Greedy algorithm to find minimum number of coins
+-> choose max coin that can we use this way we can make change
+
+----------------------------------------------------------------------------------------------
+4. Fractional Knapsack Problem 
+-> given weight and profit find max profit we can make by having some weight capacity. we can take peoduct in fraction as well.
+
+-> First we take value which have min weight and max profit for that we use formula:
+	arr[i] = val[i]/w[i]; and sort this array by desc
+--------->
+
+    int curWeight = 0;  // Current weight in knapsack 
+    double finalvalue = 0.0; // Result (value in Knapsack) 
+    for (int i = 0; i < n; i++) 
+    { 
+        if (curWeight + arr[i].weight <= W) 
+        { 
+            curWeight += arr[i].weight; 
+            finalvalue += arr[i].value; 
+        } 
+        else
+        { 
+            int remain = W - curWeight; 
+            finalvalue += arr[i].value * ((double) remain / arr[i].weight); 
+            break; 
+        } 
+    } 
+    return finalvalue; 
+
+----------------------------------------------------------------------------------------------
+5. Minimum number of platforms required for a railway 
+-> Approach 1) bruteforce that find each overlap and maintain max.
+	for i=0 to n
+		for j=i+1 to n
+			find overlap i<->j and maintain max 
+
+-> Approach 2) idea is try to find arrival train 
+		sort array arrival and dept.
+		maintain 2 pointer if train arrive platform++ else platform--
+		and maintain max among them
+	
+int findPlatform(int arr[], int dep[], int n) 
+{ 
+    // Sort arrival and departure arrays 
+    sort(arr, arr + n); 
+    sort(dep, dep + n); 
+  
+    // plat_needed indicates number of platforms 
+    // needed at a time 
+    int plat_needed = 1, result = 1; 
+    int i = 1, j = 0; 
+  
+    // Similar to merge in merge sort to process 
+    // all events in sorted order 
+    while (i < n && j < n) { 
+  
+        // If next event in sorted order is arrival, 
+        // increment count of platforms needed 
+        if (arr[i] <= dep[j]) { 
+            plat_needed++; 
+            i++; 
+        } 
+  
+        // Else decrement count of platforms needed 
+        else if (arr[i] > dep[j]) { 
+            plat_needed--; 
+            j++; 
+        } 
+  
+        // Update result if needed 
+        if (plat_needed > result) 
+            result = plat_needed; 
+    } 
+  
+    return result; 
+}
+------------------------------------------------------------------------------------------------
+6. Job sequencing Problem
+-> given deadline and profit of job. find max profit you can make by deadline doing job before deadline.
+	
+Approach 1) sort all job desc order of their profit.
+	then maintain array slot and result.
+	take first job set to as close as deadline. 
+	so, loop from deadline to zero when slot[i]=false set their and slot[i]=true
+	
+    // sort by profit
+    sort(arr, arr+n, comparison);  
+    int result[n]; // To store result (Sequence of jobs) 
+    bool slot[n];  // To keep track of free time slots 
+  
+    // Initialize all slots to be free 
+    for (int i=0; i<n; i++) 
+        slot[i] = false; 
+  
+    // Iterate through all given jobs 
+    for (int i=0; i<n; i++) 
+    { 
+       // Find a free slot for this job (Note that we start 
+       // from the last possible slot) 
+       for (int j=min(n, arr[i].dead)-1; j>=0; j--) 
+       { 
+          // Free slot found 
+          if (slot[j]==false) 
+          { 
+             result[j] = i;  // Add this job to result 
+             slot[j] = true; // Make this slot occupied 
+             break; 
+          } 
+       } 
+    } 
+  
+    // Print the result 
+    for (int i=0; i<n; i++) 
+       if (slot[i]) 
+         cout << arr[result[i]].id << " "; 
+
+-------------------------------------------------------------------------------------------
+Day9: (Backtracking) 
+
+1. N queens Problem 
+-> most popular backtrack problem: you given n*n grid and you put n queen such a way that no queen can attack eachother. queen can attack diagonally and in same column.
+ 
+-> Approach is simple try to put queen in each row column wise if not possible then backtrack.
+	Try from first row
+		put queen in first col rec call for row+1....
+
+* See code on GFG prectice submission for NQueen.
+---------------------------------------------------------------------------------------------
+2. Sudoko
+-> solve sudoku
+->given matrix having some number 9*9 and find missing number fill it and that empty cell have value 0
+	so find first 0 from matrix. break from matrix 
+	try to put 1 to 9 to that cell and before adding check can we add val to that row col
+	we check by row safe, col safe, box safe -> row - (row%3) && col - (col%3)
+	
+* see code in GFG practice
+
+---------------------------------------------------------------------------------------------
+3. M coloring Problem
+-> color graph in such a way that no two adj have same color.
+-> try from first vetex issafe to add color to that vertex then solve next.
+	same logic and same code as sudoku.
+* Code is GFG normal refers
+
+----------------------------------------------------------------------------------------------
+4. Rat in a Maze 
+-> givene maze having 0 and 1 0-block 1-open find total ways to reach (0,0) to (n-1,m-1).
+   add that operation in array as well D-down, L-left, R-right, U-up
+
+* code in GFG preactice
+----------------------------------------------------------------------------------------------
+5. Print all Permutations of a string/array
+ex: "ABC ACB BAC BCA CBA CAB" -> all permutation of ABC
+
+Time complexity : O(n*n!)
+
+permutation("abc",0,n-1);
+void permulation(string s, int l, int r) {
+	if(l==r){
+		cout << s << " ";
+		return;
+	}
+	
+	for(int i=l; i<=r; i++) {
+		swap(s[l], s[i]);
+		permutation(s, l+1, r);
+		swap(s[l], s[i]);
+	}	
+}
+
+OR ---
+call : permutation("", "abc");
+
+void permutation(string prefix, string str) {
+    
+	int n = str.size();
+    
+	if (n == 0)
+        
+		cout << prefix << " ";
+    
+	else {
+        
+		for (int i = 0; i < n; i++)
+            
+			// add current char to prefix and remove from string
+			permutation(prefix + str[i], str.substr(0,i) + str.substr(i + 1));
+    
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------
+
+6. Word Break (print all ways)  
+-> Given a valid sentence without any spaces between the words and a dictionary of valid English words, find all possible ways to break the sentence in individual dictionary words.
+
+Ex : { i, like, sam, sung, samsung, mobile, ice, 
+  cream, icecream, man, go, mango}
+
+Q: "ilikesamsungmobile"
+Ans : i like sam sung mobile
+      i like samsung mobile
+
+void wordBreak(srring s, int n, string res) {
+	for(int i=1; i<=n; i++) {
+		string prefix = s.substr(0, i); // try break first i char
+		if(contains(prefix)) { // check in dictionary contain this word prefix.
+			if(i==n) {
+				res += prefix;
+				cout << res << "\n";
+				return;
+			}
+			// 0 to i is fixed try to find next n-i validate this
+			// remove valid word from s and add to res
+			wordBreak(s.substr(i, n-i), n-i, res + prefix + " ");
+		}
+	}
+}
+
+* full code GFG
+
+-----------------------------------------------------------------------------------------------
+Day10: 
+-----------
+1. Combination sum-1 
+-> Given array and target sum. you can use any number no of times print all pair whose sum target.
+ex : arr[2, 4, 6, 8], x = 8
+Ans : [2, 2, 2, 2], [2, 2, 4], [2, 6], [4, 4], [8]
+        
+Approach :) since print all sum we not use DP we must use recursion here.
+
+// remove duplicate from array
+sort(arr.begin(), arr.end());
+erase(unique(arr.begin(), arr.end()), arr.end());
+
+void findcom(vector<int>& candidates, int target, int index, vector<vector<int>>& ans, 
+vector<int> curr){
+        
+        if(target == 0) {
+            ans.push_back(curr);            
+            return;
+        }
+        
+        if(target < 0){
+            return;
+        }
+        
+        for(int i=index; i<candidates.size(); i++){
+            curr.push_back(candidates[i]);
+            findcom(candidates, target-candidates[i], i, ans, curr);
+            curr.pop_back();
+        }
+        
+    }
+
+-------------------------------------------------------------------------------------------
+2. Combination sum-2 
+-> same as above but here you cannot use single variable multiple times.
+ex : arr[10,1,2,7,6,1,5], target = 8
+Ans :
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
+
+code :
+sort(arr.begin(), arr.end()); // arr=candidate
+void findcom(vector<int> candidates, int index, int target, vector<int> curr, vector<vector<int>>& arr){
+        
+        if(target == 0){
+            arr.push_back(curr);
+            return;
+        }
+        
+        if(target < 0){
+            return;
+        }
+        
+        for(int i=index; i<candidates.size(); i++){
+            if(i == index || candidates[i] != candidates[i-1]){
+                curr.push_back(candidates[i]);
+                findcom(candidates, i+1, target-candidates[i], curr, arr);
+                curr.pop_back();
+            }
+        }
+        
+    }
+
+-----------------------------------------------------------------------------------------
+3. Palindrome Partioning 
+-> print all possible partition of pelindrom.
+Approach:) traverse from left to right check current length pelindrom then part it and recurese from next block.
+
+void allPalPartUtil(vector<vector<string> >&allPart, vector<string> &currPart,  
+                   int start, int n, string str) 
+{ 
+    // If 'start' has reached len 
+    if (start >= n) 
+    { 
+        allPart.push_back(currPart); 
+        return; 
+    } 
+  
+    // Pick all possible ending points for substrings 
+    for (int i=start; i<n; i++) 
+    { 
+        // If substring str[start..i] is palindrome 
+        if (isPalindrome(str, start, i)) // try to find pelindrom of size i
+        { 
+            // Add the substring to result 
+            currPart.push_back(str.substr(start, i-start+1)); 
+  
+            // Recur for remaining remaining substring 
+            allPalPartUtil(allPart, currPart, i+1, n, str); 
+              
+            // Remove substring str[start..i] from current  
+            // partition 
+            currPart.pop_back(); 
+        } 
+    } 
+} 
+----------------------------------------------------------------------------------------------
+4. Subset Sum-1 
+5. Subset Sum-2
+
+-> Print all subsets with given sum (combinaiton sum 2)
+DP arroach
+
+bool isSubsetSum(int set[], int n, int sum) 
+{ 
+    // Base Cases 
+    if (sum == 0) 
+        return true; 
+    if (n == 0 && sum != 0) 
+        return false; 
+  
+    // If last element is greater than sum, 
+    // then ignore it 
+    if (set[n - 1] > sum) 
+        return isSubsetSum(set, n - 1, sum); 
+  
+    return isSubsetSum(set, n - 1, sum) 
+           || isSubsetSum(set, n - 1, sum - set[n - 1]); 
+} 
+-----------------------------------------------------------------------------------------
+6. K-th permutation Sequence 
+-> given N-length, k-int, find Kth permutation of N length number.
+number always 1 to n.
+
+Generate all permutation and count it when reach kth print it...
+void backtracking(string& buf, string& result, int num, int k, int& count, vector<int>& used) {
+        if (buf.length() == num) {
+            count++;
+            if (count == k)
+                result = buf;            
+            return;
+        }        
+        for (int i = 1; i <= num; i++) {
+            if (count <= k) {
+                if (used[i]) continue;                
+                used[i] = 1;
+                buf.push_back(i+'0');
+                backtracking(buf, result, num, k, count, used);
+                buf.pop_back();
+                used[i] = 0;
+            }
+            else {
+                break;
+            }
+        }
+}
+
+==> O(N) approach
+Link: https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I'm-five%22-Java-Solution-in-O(n)
+
+
+public String getPermutation(int n, int k) {
+    int pos = 0;
+    List<Integer> numbers = new ArrayList<>();
+    int[] factorial = new int[n+1];
+    StringBuilder sb = new StringBuilder();
+    
+    // create an array of factorial lookup
+    int sum = 1;
+    factorial[0] = 1;
+    for(int i=1; i<=n; i++){
+        sum *= i;
+        factorial[i] = sum;
+    }
+    // factorial[] = {1, 1, 2, 6, 24, ... n!}
+    
+    // create a list of numbers to get indices
+    for(int i=1; i<=n; i++){
+        numbers.add(i);
+    }
+    // numbers = {1, 2, 3, 4}
+
+    // 0 base index so 14th permutation actaually 13th so k--    
+    k--;
+    
+    for(int i = 1; i <= n; i++){
+        int index = k/factorial[n-i];
+        sb.append(String.valueOf(numbers.get(index)));
+        numbers.remove(index);
+        k-=index*factorial[n-i];
+    }
+    
+    return String.valueOf(sb);
+}
