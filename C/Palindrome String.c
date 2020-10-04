@@ -1,3 +1,4 @@
+// Program for finding Palindrome String in C
 #include<stdio.h>
 #include<string.h>
 main()
