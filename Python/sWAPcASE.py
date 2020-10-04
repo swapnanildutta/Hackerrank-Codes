@@ -30,19 +30,6 @@ hACKERrANK.COM PRESENTS "pYTHONIST 2".
 
 
 '''
-#Old Code
-
-# def swap_case(s):
-#     result=''
-#     for i in s:
-#         if i.isalpha() and i.isupper():
-#             result+=i.lower()
-#         elif i.isalpha() and i.islower():
-#             result+=i.upper()
-#         else:
-#             result+=i
-#     return result
-
 def swap_case(s):
     s=s.swapcase()
     return s
