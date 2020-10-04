@@ -1,7 +1,6 @@
-//contributor @rahulchuchra
-//This is the solution to Merge_the_Tools (hackerrank Medium level problem).
 
 
+'''
 Consider the following:
 
     A string, 
@@ -72,7 +71,7 @@ is split into equal parts of length . We convert each to by removing any subsequ
 :
 
 We then print each on a new line.
-
+'''
 
 
 //code
