@@ -1,0 +1,14 @@
+int dis[N][N];
+int inf = 1e9;
+
+void floyd_warshall() {
+	for(int k = 0; k < N; k ++) {
+		for(int i = 0; i < N; i ++) {
+			for(int j = 0; j < N; j ++) {
+				if(dis[i][k] < inf and dis[k][j] < inf) {
+					dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j]);
+				}
+			}
+		}
+	}
+}
