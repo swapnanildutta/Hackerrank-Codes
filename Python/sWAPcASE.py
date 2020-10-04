@@ -30,16 +30,20 @@ hACKERrANK.COM PRESENTS "pYTHONIST 2".
 
 
 '''
+# def swap_case(s):
+#     result=''
+#     for i in s:
+#         if i.isalpha() and i.isupper():
+#             result+=i.lower()
+#         elif i.isalpha() and i.islower():
+#             result+=i.upper()
+#         else:
+#             result+=i
+#     return result
+
 def swap_case(s):
-    result=''
-    for i in s:
-        if i.isalpha() and i.isupper():
-            result+=i.lower()
-        elif i.isalpha() and i.islower():
-            result+=i.upper()
-        else:
-            result+=i
-    return result
+    s=s.swapcase()
+    return s
 
 if __name__ == '__main__':
     s = input()
