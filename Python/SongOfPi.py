@@ -54,8 +54,6 @@ The third case is already explained in the problem statement, but here we remove
 
 '''
 
-
-#!/usr/bin/py
  
 PI = map(int, list("31415926535897932384626433833"))
  
