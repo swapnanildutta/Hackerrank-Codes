@@ -1,2 +1,2 @@
 # C
-## I have written ** C PROGRAM **  to find the largest array element using *Recursive fuction*.
+## I have written ** C program ** to find the largest array element using *Recursion*.
