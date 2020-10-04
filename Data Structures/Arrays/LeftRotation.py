@@ -1,4 +1,4 @@
-'''
+"""
 A left rotation operation on an array of size  shifts each of the array's elements  unit to the left. Given an integer, , rotate the array that many steps left and return the result.
 
 Example
@@ -36,18 +36,7 @@ Explanation
 To perform  left rotations, the array undergoes the following sequence of changes:
   [1,2,3,4,5] -> [2,3,4,5,1] -> [3,4,5,1,2] -> [4,5,1,2,3] -> [5,1,2,3,4]
 
-'''
-
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-
-
+"""
 if __name__ == '__main__':
     nd = input().split()
 
@@ -64,4 +53,3 @@ if __name__ == '__main__':
     l1 = l1+l2
 
     print(*l1)
-
