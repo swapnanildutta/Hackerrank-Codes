@@ -1,6 +1,7 @@
 
 
 '''
+
 Consider the following:
 
     A string, 
@@ -74,7 +75,7 @@ We then print each on a new line.
 '''
 
 
-//code
+
 
 def merge_the_tools(string, k):
     # your code goes here
