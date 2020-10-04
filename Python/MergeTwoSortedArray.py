@@ -101,12 +101,13 @@ def printList(arr, n) :
 #main
 t = int(stdin.readline().rstrip())
 
-while t > 0 :
+if __name__ == '__main__':
+    while t > 0 :
 
-    arr1, n = takeInput()
-    arr2, m = takeInput()
+        arr1, n = takeInput()
+        arr2, m = takeInput()
 
-    ans = merge(arr1, n, arr2, m)
-    printList(ans, (n + m))
+        ans = merge(arr1, n, arr2, m)
+        printList(ans, (n + m))
 
-    t -= 1
+        t -= 1
