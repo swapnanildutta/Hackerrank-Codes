@@ -30,6 +30,8 @@ hACKERrANK.COM PRESENTS "pYTHONIST 2".
 
 
 '''
+#Old Code
+
 # def swap_case(s):
 #     result=''
 #     for i in s:
