@@ -1,0 +1,1078 @@
+Day21: (Binary Search Tree)
+---
+1. Floor and Ceil in a BST
+-> ceil value means value which is bigger or equal to given key.
+
+int ceil(Node* root, int key){
+	if(root==NULL)
+		return -1;
+
+	if(root->val == key)
+		return root->val;
+	
+	if(root->val < key)
+		return ceil(root->right, key);
+	
+	int ans = ceil(root->left, key);
+	return (ans>=key) ? ans : root->val;
+}
+
+int floor(Node* root, int key){
+	if(root==NULL)	
+		return -1;
+	
+	if(root->val == key)
+		return root->key;
+
+	if(root->val > key)
+		return floor(root->left, key);
+	
+	int ans=floor(root->right, key);
+	return (ans<=key) ? ans : root->val;
+}
+
+FlooeCeil in one function.
+
+void findboth(Node* root, Node*& ceil, Node*& floor, int key){
+	if(root==NULL)	
+		return;
+
+	if(root->key == key) {
+		ceil=root;
+		floor=root;
+		return;
+	}
+	
+	if(root->val > key) {
+		ceil=root;
+		findboth(root->left, ceil, floor, key);
+	} else {
+		floor=root;
+		findboth(root->right, ceil, floor, key);
+	}
+	
+}
+
+-----------------------------------------------------------------------------------
+2. Find K-th smallest and K-th largest element in BST (2 different Questions) 
+
+-> kth smallest number in BST.
+
+// do preorder traversal and as hit kth item print it.
+
+void kthSmallest(Node* root, int kth){
+	if(!root) return;
+	
+	kthSmallest(root->left, kth);
+	k++;
+	if(k==kth)
+		ans=root->val;
+	kthSmallest(root->left, kth);
+	
+}
+
+// we get largest number from last so we inorder from right to left we get this
+reverse array.
+
+// we avoid unnacessary calls.
+void kthlargest(Node* root, int &count, int&kth){
+	if(!root || count>=kth)
+		return;
+	
+	kthlargest(root->right, count, kth);	
+	count++;
+	if(count==kth) {
+		cout << root->val << "\n";
+		return;
+	}
+	kthlargest(root->left, count, kth);
+}
+
+-----------------------------------------------------------------------------------
+3. Find a pair with a given sum in BST
+-> same as 2 sum problem with BST.
+
+// we use hashing O(N) extra space.
+unordered_set<int> s;
+
+bool findpair(Node* root, int sum){
+	if(!root) return false;
+	
+	// we can find sum in left tree.
+	if(findpair(root->left, sum))
+		return true;
+
+	if(s.find(sum - root->val) != s.end()) {
+		cout << "find : " << root->val << "  " << sum-root->val << "\n";
+		return; 
+	}
+	s.insert(root->val);
+	return findpair(root->right, sum);
+}
+
+
+// we can solve in O(Logn) space.
+// just think we have sorted array so we just use two pointer
+// same we do with two stack.
+
+bool findpair(Node* root, int sum){
+
+	stack<Node*> it1, it2;
+	Node* c=root;
+
+	while(c!=NULL)
+		it1.push(c->val), c=c->left;
+
+	c=root;
+	while(c!=NULL)
+		it2.push(c->val), c=c->right;
+
+	// so, now we have left most, right most tree first and last element.
+		
+	while(it1.top() != it2.top()) {
+		int v1=it1.top();
+		int v2=it2.top();
+
+		if(v1+v2 == sum) 
+			return true;
+		
+		// move left pointer
+		if(v1+v2 < sum) {
+			c=it1.top()->right; it1.pop();
+			while(c!=NULL)
+				it1.push(c->val), c=c->left;
+		}
+		else {
+			c=it2.top()->left; it2.pop();
+			while(c!=NULL)
+				it2.push(c->val), c=c->right;
+		}
+		
+	}
+	return false;
+}
+
+---------------------------------------------------------------------------
+4. BST iterator
+-> calling next will return next samllest number in BST.
+
+-> BST smallest in left most side and 2nd smallest is smallest->right left most side.
+
+    stack<TreeNode*> s;    
+
+    // O(logn)
+    void pushAll(TreeNode* root){
+        // push all left node
+        auto c = root;
+        while(c!=NULL)
+            s.push(c), c=c->left;
+    }
+	
+    BSTIterator(TreeNode* root) {
+        pushAll(root);
+    }
+  
+    // O(logn)   
+    int next() {
+        // calling next will give next smaller element.
+        // so it gone from top but next smaller is cur->right side left most
+        auto cur = s.top(); s.pop();
+        pushAll(cur->right);
+        return cur->val;
+    }
+ 
+    // O(1)   
+    bool hasNext() {
+        return !s.empty();
+    }
+
+-----------------------------------------------------------------------------
+5. Size of the largest BST in a Binary Tree
+
+// Bruteforce check each root weathre it is BST if BST count height.
+
+// we can do in O(N), by adding struct and return it.
+
+struct Info 
+{ 
+    int sz; // Size of subtree 
+    int max; // Min value in subtree 
+    int min; // Max value in subtree 
+    int ans; // Size of largest BST which 
+    // is subtree of current node 
+    bool isBST; // If subtree is BST 
+}; 
+
+Info largestBst(Node* root){
+	if(root==NULL)
+		return {0, INT_MIN, INT_MAX, 0, true};
+
+	// leaf node
+	if(!root->left && !root->right)
+		return {0, root->val, root->val, 1, true};
+
+	Info left = largestBst(root->left);
+	Info right = largestBst(root->right);
+
+	Info ret;
+	ret.sz = 1 + left.sz + right.sz;
+	
+	// if cur is BST	
+	if(left.isBST && right.isBST && left.max < root->val && right.min > root->val) {
+		ret.isBST=true;
+		ret.ans=ret.sz;
+		ret.max={left.max, right.max, root->val};
+		ret.min={left.min, right.min, root->val};
+
+		return ret;
+	}
+	
+	// if current is not bst
+	ret.ans = max(left.ans, right.ans);
+	ret.isBST = false;
+
+	return ret;
+}
+
+----------------------------------------------------------------------------
+6. Serialize and deserialize Binary Tree
+
+-> Serialize: make tree in to string or array.
+-> deserialize : make tree from array or string which we make already.
+
+// make array from BST when null add -1.
+
+void serialize(Node *root,vector<int> &A)
+{
+
+    
+    if(root == NULL) {
+
+        	A.push_back(-1); // -1 means Null node
+   
+        	return;
+
+    	}
+    
+	// we do preorder Traversal and for null put -1
+    
+    
+	A.push_back(root->data);
+    
+	serialize(root->left, A);
+    
+	serialize(root->right, A);
+
+}
+
+// array and index from traverse
+Node * deSerialize(vector<int> &A, int& i) {
+    
+    
+	if(A[i] == -1) {
+        
+		i++;
+        
+		return NULL;
+    
+	}
+
+    
+    Node* root = new Node(A[i]);
+
+	i++;
+    
+    
+	root->left = deSerialize(A, i);
+    
+	root->right = deSerialize(A, i);
+    
+	return root;
+
+}
+ 
+
+
+Node * deSerialize(vector<int> &A)
+{
+    
+	int index=0;
+    
+	return deSerialize(A, index);
+
+}
+
+-----------------------------------------------------------------------------------
+Day 22:
+-----------
+1) Binary Tree to Double Linked List 
+
+void BtoDLL(Node* root Node*& head){
+	if(!root) return ;
+
+	static Node* prev = NULL;
+
+	BtoDLL(root->left, head);
+
+	if(prev == NULL)
+		head = root;
+	else {
+		prev->right=root;
+		root->left=prev;
+	}
+	prev=root;
+
+	BtoDLL(root->right, head);	
+
+}
+
+----------------------------------------------------------------------------
+2. Find median in a stream of running integers.
+// maintain min and max heap.
+// maxHeap for lower no min for upper no
+// check size of two heap.
+// if size is same :
+	and if current less then median(default 0) insert left (MaxHeap) side.
+	else insert right side.
+	and median = which side inserted its top
+// if left side more element:
+	if(current insert to left pop top of left push to right and add current to left)
+	else add to right direct.
+	// take avg of left top and right top
+// if right side more.
+	if(current insert to left insert it)
+	else remove top right add to left and add current to right.
+
+
+int getMedian(int e, int &m, Heap &l, Heap &r) 
+{ 
+    // Are heaps balanced? If yes, sig will be 0 
+    int sig = Signum(l.GetCount(), r.GetCount()); 
+    switch(sig) 
+    { 
+    case 1: // There are more elements in left (max) heap 
+  
+        if( e < m ) // current element fits in left (max) heap 
+        { 
+            // Remore top element from left heap and 
+            // insert into right heap 
+            r.Insert(l.ExtractTop()); 
+  
+            // current element fits in left (max) heap 
+            l.Insert(e); 
+        } 
+        else
+        { 
+            // current element fits in right (min) heap 
+            r.Insert(e); 
+        } 
+  
+        // Both heaps are balanced 
+        m = Average(l.GetTop(), r.GetTop()); 
+  
+        break; 
+  
+    case 0: // The left and right heaps contain same number of elements 
+  
+        if( e < m ) // current element fits in left (max) heap 
+        { 
+            l.Insert(e); 
+            m = l.GetTop(); 
+        } 
+        else
+        { 
+            // current element fits in right (min) heap 
+            r.Insert(e); 
+            m = r.GetTop(); 
+        } 
+  
+        break; 
+  
+    case -1: // There are more elements in right (min) heap 
+  
+        if( e < m ) // current element fits in left (max) heap 
+        { 
+            l.Insert(e); 
+        } 
+        else
+        { 
+            // Remove top element from right heap and 
+            // insert into left heap 
+            l.Insert(r.ExtractTop()); 
+  
+            // current element fits in right (min) heap 
+            r.Insert(e); 
+        } 
+  
+        // Both heaps are balanced 
+        m = Average(l.GetTop(), r.GetTop()); 
+  
+        break; 
+    } 
+  
+    // No need to return, m already updated 
+    return m; 
+} 
+
+----------------------------------------------------------------------------------
+3. K-th largest element in a stream.
+-> for largest maintain meanHeap of size K
+insert into heap when count  > k remove top from heap
+and top return always desired output.
+
+-----------------------------------------------------------------------------------
+4. Distinct numbers in Window.
+-> count distinct number in every window.
+-> sliding window and hashing.
+
+void countDistinct(int arr[], int k, int n) 
+{ 
+    map<int, int> hm; 
+  
+    int dist_count = 0; 
+
+    for (int i = 0; i < k; i++) { 
+        if (hm[arr[i]] == 0) { 
+            dist_count++; 
+        } 
+        hm[arr[i]] += 1; 
+    } 
+  
+    cout << dist_count << endl; 
+  
+    for (int i = k; i < n; i++) { 
+
+        if (hm[arr[i - k]] == 1) { 
+            dist_count--; 
+        } 
+
+        hm[arr[i - k]] -= 1; 
+ 
+       if (hm[arr[i]] == 0) { 
+            dist_count++; 
+        } 
+        hm[arr[i]] += 1; 
+        cout << dist_count << endl; 
+    } 
+}
+----------------------------------------------------------------------------
+5. K-th largest element in an unsorted array.
+-> we can use heap as 3rd O(NLogn)
+-> quickselect algo. By default nth_element() stl..
+
+nth_element(a.begin(), a.begin()+k, a.end());
+ans = a[k];
+----------------------------------------------------------------------------
+6. Flood-fill Algorithm
+---------------------------
+
+void fill(vector<vector<int>>& image, int i, int j, int oldColor, int newColor) {
+	if(i < 0 || i >= image.size() || j < 0 || j >= image[i].size())
+	        return;
+	
+	if(image[i][j] != oldColor)
+		return;
+
+	image[i][j] = newColor;
+
+	// main recursive calls
+	fill(image, i+1, j, oldColor, newColor);
+	fill(image, i-1, j, oldColor, newColor);
+	fill(image, i, j+1, oldColor, newColor);
+	fill(image, i, j-1, oldColor, newColor);
+
+}
+
+vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+	if(image[sr][sc] == newColor)
+		return image;
+
+	fill(image, sr, sc, image[sr][sc], newColor);
+	return image;
+}
+
+-------------------------------------------------------------------------------
+Day 23
+-----------
+1. Clone a graph (Not that easy as it looks)
+-> maintain map and copy from original with new operator.
+
+Node* cloneGraph(Node* node) {
+        if(node == NULL) return NULL;
+        map<Node*, Node*> mp;
+        queue<Node*> q;
+        
+        q.push(node);
+        mp[node] = new Node(node->val);
+        
+        while(!q.empty()){
+            auto cur = q.front(); q.pop();
+            
+            for(auto v : cur->neighbors) {
+                if(mp.find(v) == mp.end()) {
+                    mp[v] = new Node(v->val);
+                    q.push(v);
+                }
+                mp[cur]->neighbors.push_back(mp[v]);
+            }
+        }
+        return mp[node];
+}
+
+--------------------------------------------------------------
+2. DFS // Done
+3. BFS // Done
+--------------------------------------------------------------
+4. Detect A cycle in Undirected Graph/Directed Graph 
+
+i) Detect Cycle in Undirected in graph.
+-> maintain parent node as well and Do DFS.
+-> when from node it's adjcent  and when child(v) visited. and v != parent means there is cycle.
+
+ii) Detect Cycle in directed Graph.
+-> Do DFS and maintain 2 array 1 visited and 2nd instack.
+-> when you process any node instack true for that node and instack false after it preocessed.
+meantime if this node again comes in anyother nodes adjcent that means there is cycle.
+
+------------------------------------------------------------------------------------------
+5. Topo Sort
+-> when there is dependency node to other there is use topological sort.
+-> khrn's Algorithm is very simple.
+-> maintain inDegree node array.
+-> push in queue of all node having indrgree in 1.
+-> then DO BFS one by one from queue and add to topo sort and 
+- minus indegree of that node and if it become 0 add to queue.
+
+-> DFS approach.
+do normal dfs and then after loop in dfs fun add to stack current processed node.
+print stack thats it.
+
+---------------------------------------------------------------------------------------------
+6. Number of islands (Do in Grid and Graph both) 
+-> it's just find Scc in graph and grid.
+
+---------------------------------------------------------------------------------------------
+7. Bipartite Check
+-> this means divide graph in to two group such that no adj in same group.
+-> we use color array to color graph and check no 2 adj have same color and we use 2 color.
+
+Code : false means graph is not bipartite.
+bool dfs(int u, vector<int> adj[], int col[], bool vis[], int c){
+	vis[u]=true;
+	col[u]=c;	
+	for(auto v : adj[u]){
+		if(!vis[v]) {
+			if( dfs(v, adj, col, vis, c^1) == false )
+				return false;
+		}
+		else 
+			if(col[u] == col[v])
+				return false;		
+	}
+	return true;
+}
+
+-----------------------------------------------------------------------------------------
+Day24: (Graph)
+----------------
+1. SCC(using KosaRaju’s algo) 
+-> first do dfs on graph and fill stack as node processed.(topo sort)
+-> then transpose graph.
+-> start Dfs on new graph and start node from out stack and mark visited.
+and maintain array as node comes add to array. when stuck means we find first scc move to next
+unvisited node from stack.
+
+------------------------------------------------------------------------
+2. Djisktra’s Algorithm 
+-> we use priority queue for getting shortest distance node and do BFS there.
+------------------------------------------------------------------------
+3. Bellman Ford Algo 
+-> it's DP because we explore all possible distance.
+-> GFG algo.
+-------------------------------------------------------------------------
+4. Floyd Warshall Algorithm  
+-> Its also DP but it gives all pair shortest path.
+
+- core logic:
+	
+for (k = 0; k < V; k++)  
+    {  
+        // Pick all vertices as source one by one  
+        for (i = 0; i < V; i++)  
+        {  
+            // Pick all vertices as destination for the  
+            // above picked source  
+            for (j = 0; j < V; j++)  
+            {  
+                // If vertex k is on the shortest path from  
+                // i to j, then update the value of dist[i][j]  
+                if (dist[i][k] + dist[k][j] < dist[i][j])  
+                    dist[i][j] = dist[i][k] + dist[k][j];  
+            }  
+        }  
+    }  
+
+------------------------------------------------------------------------------
+5. MST using Prim’s Algo 
+
+
+------------------------------------------------------------------------------
+6. MST using Kruskal’s Algo  
+-> very eusy algorithm.
+-> just sort node by weight and traverse on that at start each node from diff group now one by one
+merge node.
+-> when node not in same group merge it.
+
+code :------
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// Disjoint set union algorithm.
+
+struct Edge {
+	int u;
+	int v;
+	int w;
+};
+
+int par[10001];
+
+// find function DSU
+int find(int a){
+	if(par[a] == -1)
+		return a;
+	
+	return par[a] = find(par[a]);
+}
+
+// merge function
+
+void merge(int u, int v){
+	par[u]=v;
+}
+
+int main(){
+	int node, edge;
+	cin >> node >> edge;	
+	Edge adj[edge+1]={};
+	
+	for(int i=0; i<=node; i++) par[i]=-1;
+	
+	for(int i=0; i<edge; i++){
+		cin >> adj[i].u;
+		cin >> adj[i].v;
+		cin >> adj[i].w;
+	}
+
+	int sum=0;
+	//sort by min weight	
+	sort(adj, adj+edge , [](Edge a, Edge b){
+		return a.w<b.w;
+	});
+	
+	for(int i=0; i<edge; i++){
+		int u, v;
+		// find parents.
+		u = find(adj[i].u);
+		v = find(adj[i].v);
+		
+		// both from diff set.
+		if(u != v) {
+			sum += adj[i].w;
+			// merge in to same set
+			merge(u, v);
+		}
+	}	
+	cout << sum << "\n";
+}
+
+---------------------------------------------------------------------------------------------
+Day 25:
+1. Max product subarray.
+- DP: arroach.
+- there is also negetive and 0 number so we need slide variation of kadenes.
+- 2 minus number product also become big pos numer.
+- so we make 2 array 1 is maintain max product with pos number.
+- second is min product with neg number. neg smaller is same as max pos after mult.
+
+
+int max_till[n], min_till[n];
+int ans=a[0];
+max_till[0]=min_till[0]=ans;
+
+for(int i=1; i<n; i++){
+	max_till[i]=max({a[i], max_till[i-1]*a[i], min_till[i-1]*a[i]});
+	min_till[i]=min({a[i], max_till[i-1]*a[i], min_till[i-1]*a[i]});
+	ans=max(ans, max_till[i]);
+}
+return ans;
+
+-- we can also resuce space here.
+
+--------------------------------------------------
+2. Longest Increasing Subsequence
+
+// O(n^2) many variations of this problem...
+ int lengthOfLIS(vector<int>& nums) {        
+        int n = nums.size();
+        if(n==0)
+            return 0;
+        vector<int> dp(n,1);
+        int ans=1;
+        
+        for(int i=1; i<n; i++){
+            for(int j=0; j<i; j++){
+                if( nums[i] > nums[j] && dp[j]+1 > dp[i] )
+                    dp[i]=dp[j]+1;                
+            }
+            ans=max(ans, dp[i]);
+        }
+        return ans;
+    }
+
+---------------------------------------------------------
+3. Longest Common Subsequence
+
+int lcs(string s1, string s2, int l1, int l2){
+	if(l1==0 || l2==0)
+		return 0;
+
+	if(s1[l1-1] == s2[l2-1])
+		return 1+lcs(s1,s2,l1-1, l2-1);
+
+	return max( lcs(s1,s2,l1,l2-1), lcs(s1,s2,l1-1,l2) );
+
+}
+
+----------------------------------------------------------
+4. 0-1 Knapsack
+-> it is very basic algo at each step choose it or not choose it maintain this only.
+
+int solve(int val[], int wt[], int n, int capacity){
+	if(n==0 || capacity==0)
+		return 0;
+
+	// not choose because weight more than capacity.
+	if( wt[n-1] > capacity )
+		return solve(val, wt, n-1, capacity);
+	
+	return max( val[n-1] + solve(val, wt, n-1, capacity-wt[n-1]), solve(val, wt, n-1, capacity) );
+
+}
+
+------------------------------------------------------------
+5. Edit distance.
+-> very hard problem when you look first time but eventually its very eusy approach.
+- given string. you can perform 3 operation make s1 to s2. insert, delete, replace.
+- in min operation make string same.
+- here we do bruteforce try all possibility and take min one and we are done.
+
+
+string s1,s2;
+int n=s1.size(), m=s2.size();
+dp[n+1][m+1];
+dp[0][0]=0;
+
+for(int i=1; i<=n; i++){
+	for(int j=1; j<=m; j++){
+		if(i==0) {
+			dp[i][j]=j;	
+		}
+		else if(j==0) {	
+			dp[i][j]=i;
+		}
+		else if(s1[i-1] == s2[j-1]) {
+			dp[i][j]=dp[i-1][j-1];
+		}
+		else {
+			int insert = dp[i][j-1];
+			int delete = dp[i-1][j];
+			int replace = dp[i-1][j-1];
+			dp[i][j]=1 + min({insert, delete, replace});
+		}
+	}
+}
+return dp[n][m];
+
+----------------------------------------------------------------------
+6. Maximum sum increasing subsequence  
+
+- LIS variation.
+
+int arr[]=given.
+int dp[n+1]={};
+
+int ans=arr[0];
+for(int i=1; i<n; i++){
+	for(int j=0; j<i; j++){
+		if(arr[i] > arr[j] && dp[j]+arr[i] > dp[i])
+			dp[i]=dp[j]+arr[i];
+	}
+	ans=max(ans, dp[i]);
+}
+
+------------------------------------------------------------------------
+7. Matrix Chain Multiplication
+-> given matrix dim array you need to find min no of mult require for all matrix.
+
+solve(a, 1, n-1);
+
+int solve(int a[], int i, int j){
+	if(i>=j)
+		return 0;
+	
+	int ans=INT_MAX;
+	for(int k=i; k<=j-1; k++){
+		int cur = solve(a, i, k) + solve(a, k+1, j) + (a[i-1]*a[k]*a[j]);
+		ans=min(ans, cur);
+	}
+
+	return ans;
+}
+
+--------------------------------------------------------------------------------------------
+Day 26.
+
+1. Maximum sum path in matrix, (count paths, and similar type do, also backtrack to find the maximum path).
+-> max path when go top to down with diagonal allow.
+-> very simple approach traverse from second row and add current cell to max above row of 3.
+
+for(int i=1; i<n; i++){
+	for(int j=0; j<m; j++){
+		if(j>0 && j<m-1)
+			arr[i][j] += max({arr[i-1][j], arr[i-1][j-1], arr[i-1][j+1]});
+		else if(j>0)
+			arr[i][j] += max({arr[i-1][j], arr[i-1][j+1]});
+		else
+			arr[i][j] += max({arr[i-1][j], arr[i-1][j-1]});
+	}
+}
+
+// find max val from last row.
+
+--> version from 0,0 to n,m cell with max val.
+-> maintain visited array and dp[i][j] stores max val i to j.
+
+int dp[n][m]={};
+bool vis[n][m]={};
+
+int findmax(int i, int j){
+	if(i==n-1 && j==m-1)
+		return a[i][j];
+	
+	if(vis[i][j])
+		return dp[i][j];
+
+	vis[i][j]=true;
+
+	if(i<n-1 && j<m-1) {
+		int cur = max({findmax(i, j+1), findmax(i+1, j), findmax(i+1, j+1)});
+		dp[i][j] += cur;
+	}
+	else if(i==n-1) {
+		dp[i][j] += findmax(i, j+1);
+	}
+	else
+		dp[i][j] += findmax(i+1, j);
+	
+	return dp[i][i];
+}
+
+-------------------------------- or -- for min path sum -> top down allow
+for(int i=0; i<n; i++){
+	for(int j=0; j<m; j++){
+         	dp[i][j]=grid[i][j];
+                
+         	if(i>0 && j>0) {
+         		dp[i][j] += min(dp[i-1][j], dp[i][j-1]);
+         	}
+         	else if(i>0)
+        		dp[i][j] += dp[i-1][j];
+        	 else if(j>0)
+                	dp[i][j] += dp[i][j-1];                
+         	}
+}
+return dp[n-1][m-1];
+
+
+------------------------------------------------------------------------
+2. Coin change.
+
+i) min coin needed.
+
+vector<int> dp(n, INT_MAX);
+dp[0]=0;
+for(int i=1; i<=sum; i++){
+	for(int j=0; j<n; j++){
+		if(coin[j] <= i)
+			d[i]=min(dp[i], dp[i-coin[j]] + 1);
+	}
+}
+return dp[sum];
+
+ii) total ways change.
+
+int dp[coin.size()+1][sum+1]{};
+
+dp[0][0]=1;
+for(int i=0; i<=coin.size(); i++){
+	for(int j=0; j<=sum; j++){
+		if(j==0) 
+			dp[i][j]=1;
+		else if(i==0)
+			dp[i][j]=0;
+		else {
+			int withcoin=0, withoutcoin=0;
+			withoutcoin=dp[i-1][j];
+
+			if(coin[i-1]<=j) // current coin less then sum so we can change.
+				withcoin=1+dp[i][j-coin[i-1]];
+			dp[i][j]=withcoin + withoutcoin;
+
+		}
+	}
+}
+
+
+----------------------------------------------------------------------------
+3. Subset Sum.
+
+very basic 0-1 knapsack variation. choose item not choose item.
+-> find subset of array having sum = s.
+
+int arr and sum given.
+
+bool solve(int a[], int sum, int n){
+	if(sum==0)
+		return true;
+	if(n==0)
+		return false;
+	
+	if( a[n-1] > sum )
+		return solve(a, sum, n-1);
+
+	// choose and not choose.
+	return solve(a, sum, n-1) || solve(a, sum-a[n-1], n-1);
+	
+}
+
+-----------------------------------------------------------------------------------
+4. Rod Cutting
+-> it is unbounded knapsack version.
+
+we can choose rod even we used once we discard not choose again.
+given length and price aray you need to find max profit after cutting rod.
+- make length aray 1 to n.  
+
+// variation of knapsack.
+	n_len=capacity which is total length which is remain length
+
+int solve(int len[], int profit[], int n_len, int n){
+	if(n == 0 || n_len == 0)
+		return 0;
+	
+	if( len[n-1] > n )
+		return solve(len, profit, n_len, n-1);	
+	else {
+		return max( profit[n-1] + solve(len, profit, n_len - len[n-1], n-1), 
+			solve(len, profit, n_len, n-1) );		
+	}	
+	
+}
+
+-----------------------------------------------------------------------
+5. Egg Dropping.
+-> eusy problem variation MCM.
+
+int solve(int e, int f){
+	if(f<=1)
+		return f;
+	if(e==1)
+		return f;
+		
+	int ans = INT_MAX;
+	// drop egg from all floor
+	for(int k=1; k<=f; k++){
+		int brk = solve(e-1, k-1);
+		int nobrk = solve(e, f-k);
+		int cur = 1 + max(brk, nobrk); // worst case +1 from cur try
+		ans=min(ans, cur);
+	}
+	return ans;
+}
+
+// more optimize egg drop.
+-> here we assume number of move ie. drop and find min floor require to that drop.
+-> when min floor >= actual floor we return move.
+
+dp[m][e] = in m move e egg drop find min move.
+
+dp[f+1][e+1]={}; // dp[flooe][egg]
+int move=0;
+
+while(dp[move][e] < f)
+	move++;
+	for(int k=1; k<=e; k++) {
+		dp[move][k] = dp[move-1][k-1] + dp[move-1][k] + 1;
+		// move used move-1 and egg break k-1 or egg not break k
+	}
+}
+
+return move;
+
+-----------------------------------------------------------------------------------
+6. Word Break
+
+disc[] ={ i, like, sam, sung, samsung, mobile, ice, 
+  cream, icecream, man, go, mango}
+
+Input:  ilike
+Output: Yes 
+
+bool iscontain(string word){
+	for(int i=0; i<dict.size(); i++) {
+		if(dict[i] == word)
+			return true;
+	}
+	return false;
+}
+
+bool wordbreak(string str){
+	int size = str.size();
+	if(size==0) return true;
+	
+	// try all prefix from len 1 to size.
+	for(int i=1; i<=size; i++){
+
+		// if prefix contain word then check recursivly suf.
+		if( iscontain(str.substr(0, i)) && wordbreak(str.substr(i, size-1)) )
+			return true;
+	}
+	return false;
+}
+
+----------------------------------------------------------------------------------
+
+7. Palindrome Partitioning (MCM Variation).
+-> we try to part each ith index.
+-> return min part require make all part pelindrom.
+
+
+int solve(string s, int i, int j){
+	if(i>=j) 
+		return 0;
+
+	if(ispelin(s, i, j))
+		return 0;
+
+	int ans = INT_MAX;
+	for(int k=i; k<=j-1; k++){
+ 		int cur = 1 + solve(s, i, k) + solve(s, k+1, j);
+		ans = min(ans, cur);
+	}
+	return ans;
+}
+ 
+------------------------------******************************************------------------------------
+
