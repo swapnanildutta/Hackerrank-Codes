@@ -1,1 +1,34 @@
-# Python
+# Python Hackerrank Codes
+
+**Following Codes are Present**
+
+
+* [Capitalize](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Capitalize!.py)
+* [Collections Counter](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsCounter.py)
+* [Collections Namedtuple](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsNamedtuple.py)
+* [Collections OrderedDict](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsOrderedDict.py)
+* [Compress the String](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compress%20the%20String.py)
+* [Else-If](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Else-If.py)
+* [Find a string](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Find%20a%20string.py)
+* [Finding The Percentage](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindingThePercentage.py)
+* [Find Second RunnerUp](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindSecondRunnerUp.py)
+* [Iterables and Iterators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Iterables%20and%20Iterators.py)
+* [Itertools Combinations](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ItertoolsCombinations.py)
+* [Itertools Combinations with Replacecment](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ItertoolsCombinations_with_replacement.py)
+* [Itertools Permutation](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ItertoolsPermutations.py)
+* [Itertools Product](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ItertoolsProduct.py)
+* [Leap Year](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/LeapYear.py)
+* [List Comprehension](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ListComprehensions.py)
+* [Mutations]https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py()
+* [NestedLists](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/NestedLists.py)
+* [Mod Power](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Power%20-%20Mod%20Power.py)
+* [Set discard remove and copy](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Set%20.discard()%2C%20.remove()%20%26%20.pop().py)
+* [String Validators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/String%20Validators.py)
+* [swapcase](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/sWAPcASE.py)
+* [Symmetric Difference](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/SymmetricDifference.py)
+* [Text Alignment](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Text%20Alignment.py)
+* [Text Wrap](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Text%20Wrap.pyv)
+* [Tuples](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Tuples.py)
+* [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
+* [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
+
