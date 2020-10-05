@@ -16,8 +16,6 @@ The first line contains an integer , the number of socks represented in .
 The second line contains  space-separated integers describing the colors  of the socks in the pile.
 
 Constraints
-
- where 
 Output Format
 
 Return the total number of matching pairs of socks that Alex can sell.
@@ -35,17 +33,7 @@ sock.png
 
 Alex can match three pairs of socks'''
 
-
-
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-# Complete the sockMerchant function below.
+#solution
 def sockMerchant(n, ar):
     return sum([ar.count(i)//2 for i in set(ar)])
 
