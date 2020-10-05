@@ -72,16 +72,12 @@ is split into equal parts of length . We convert each to by removing any subsequ
 We then print each on a new line.
 '''
 
-
-
-
 def merge_the_tools(string, k):
     # your code goes here
     lst=list(string[i:i+k] for i in range(0,len(string),k))
     #print(lst)
     for s in lst:
         l=[]
-        
         for i in s:
             if not i in l:
                 l.append(i)
