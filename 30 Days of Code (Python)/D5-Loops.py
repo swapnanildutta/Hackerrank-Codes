@@ -8,28 +8,21 @@ Given an integer,
 
 ) should be printed on a new line in the form: n x i = result.
 
-Input Format
-
+Input Format:
 A single integer,
-
 .
-
 Constraints
 
-Output Format
-
+Output Format:
 Print
 lines of output; each line (where ) contains the of
-
 in the form:
 n x i = result.
 
-Sample Input
-
+Sample Input:
 2
 
-Sample Output
-
+Sample Output:
 2 x 1 = 2
 2 x 2 = 4
 2 x 3 = 6
@@ -42,14 +35,11 @@ Sample Output
 2 x 10 = 20
 
 '''
-
 import math
 import os
 import random
 import re
 import sys
-
-
 
 if __name__ == '__main__':
     n = int(input())
