@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/xor-se/problem
+
 import math
 import os
 import random
