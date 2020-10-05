@@ -1,3 +1,6 @@
+#https://www.hackerrank.com/challenges/playing-with-characters/problem
+#Input a character,string and sentence and print it
+
 /*Objective
 
 This challenge will help you to learn how to take a character, a string and a sentence as input in C.
