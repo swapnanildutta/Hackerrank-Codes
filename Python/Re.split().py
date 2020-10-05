@@ -11,11 +11,11 @@ It’s guaranteed that every comma and every dot in
 
 is preceeded and followed by a digit.
 
-Sample Input 0
+
 
 100,000,000.000
 
-Sample Output 0
+
 
 100
 000
