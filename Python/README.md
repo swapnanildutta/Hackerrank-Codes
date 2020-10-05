@@ -10,7 +10,7 @@
 * [Compress the String](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compress%20the%20String.py)
 * [Else-If](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Else-If.py)
 * [Find a string](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Find%20a%20string.py)
-* [Find Digits](https://github.com/Amankazz/Hackerrank-Codes/blob/master/Python/FindDigits.py)
+* [Find Digits](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindDigits.py)
 * [Finding The Percentage](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindingThePercentage.py)
 * [Find Second RunnerUp](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindSecondRunnerUp.py)
 * [Iterables and Iterators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Iterables%20and%20Iterators.py)
