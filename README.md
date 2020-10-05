@@ -7,8 +7,8 @@
 # Hackerrank-Codes
 
 Here are some of the HackerRank Codes. Please try them by yourself and then check them out. These are just to help you understand better.
-## Good thought for help other people.
-## I am impressed!
+
+
 ## Instruction for contributers:-
 
 For contributing, please follow the following instructions :
