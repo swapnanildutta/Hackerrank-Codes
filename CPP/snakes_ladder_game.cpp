@@ -1,5 +1,26 @@
 //https://www.hackerrank.com/challenges/the-quickest-way-up/problem
 
+/*
+
+Markov takes out his Snakes and Ladders game, stares at the board and wonders: "If I can always roll the die to whatever number I want, what would be the least number of rolls to reach the destination?"
+
+Rules The game is played with a cubic die of
+faces numbered to
+
+.
+
+    Starting from square land on square with the exact roll of the die. If moving the number rolled would place the player beyond square
+
+    , no move is made.
+
+    If a player lands at the base of a ladder, the player must climb the ladder. Ladders go up only.
+
+    If a player lands at the mouth of a snake, the player must go down the snake and come out through the tail. Snakes go down only.
+
+
+
+*/
+
 #include <bits/stdc++.h>
 #define SIZE 100
 
