@@ -13,3 +13,6 @@ For contributing, please follow the following instructions :
 - Add working codes. Please !
 - Raise an issue whenever you find something incorrect.
 - Always update the README when you upload a new file.
+- Check the other PRs for changes required, else approve them.
+- Wait till the PR is checked and merged.
+- Be kind.
