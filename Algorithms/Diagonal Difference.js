@@ -29,7 +29,7 @@ Constraints
 
 Output Format
 
-Return the absolute difference between the sums of the matrix's two diagonals as a single integer.
+Return the absolute difference between the sums of the matrix"s two diagonals as a single integer.
 
 Sample Input
 
@@ -60,22 +60,22 @@ Difference: |4 - 19| = 15
 Note: |x| is the absolute value of x
 */
 
-'use strict';
+"use strict";
 
-const fs = require('fs');
+const fs = require("fs");
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function (inputStdin) {
+process.stdin.on("data", function (inputStdin) {
   inputString += inputStdin;
 });
 
-process.stdin.on('end', function () {
-  inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
   main();
 });
@@ -85,7 +85,7 @@ function readLine() {
 }
 
 /*
- * Complete the 'diagonalDifference' function below.
+ * Complete the "diagonalDifference" function below.
  *
  * The function is expected to return an INTEGER.
  * The function accepts 2D_INTEGER_ARRAY arr as parameter.
@@ -121,14 +121,14 @@ function main() {
 
   for (let i = 0; i < n; i++) {
     arr[i] = readLine()
-      .replace(/\s+$/g, '')
-      .split(' ')
+      .replace(/\s+$/g, "")
+      .split(" ")
       .map((arrTemp) => parseInt(arrTemp, 10));
   }
 
   const result = diagonalDifference(arr);
 
-  ws.write(result + '\n');
+  ws.write(result + "\n");
 
   ws.end();
 }
