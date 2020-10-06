@@ -10,6 +10,7 @@
 * [Compress the String](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compress%20the%20String.py)
 * [Day of the Programmer](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Day-of-the-Programmer.py)
 * [Else-If](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Else-If.py)
+* [Extra Long Factorials](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ExtraLongFactorials.py)
 * [Find a string](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Find%20a%20string.py)
 * [Finding The Percentage](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindingThePercentage.py)
 * [Find Second RunnerUp](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindSecondRunnerUp.py)
