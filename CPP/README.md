@@ -6,3 +6,4 @@
 * [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem)
 * [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
+* [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
