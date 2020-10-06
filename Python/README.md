@@ -21,7 +21,7 @@
 * [Leap Year](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/LeapYear.py)
 * [List Comprehension](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ListComprehensions.py)
 * [Mod Divmod](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ModDivmod.py)
-* [Mutations]https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py()
+* [Mutations] (https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py)
 * [NestedLists](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/NestedLists.py)
 * [Mod Power](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Power%20-%20Mod%20Power.py)
 * [Set discard remove and copy](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Set%20.discard()%2C%20.remove()%20%26%20.pop().py)
@@ -33,4 +33,4 @@
 * [Tuples](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Tuples.py)
 * [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
 * [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
-
+* [Python eval](https://www.hackerrank.com/challenges/python-eval/problem)
