@@ -7,6 +7,8 @@ print(my_string)
 
 Now try it youreself to print the following in the console.
 Hello, World!
+
+Below is the working solution
 '''
 def hello_world():      #Function to print the text
     print('Hello, World!')
