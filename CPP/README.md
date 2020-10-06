@@ -6,5 +6,5 @@
 * [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem)
 * [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
-* [Coloring Balls Problem](https://github.com/Divyessh/Hackerrank-Codes/blob/master/CPP/ColoringBallsProblem.cpp)
-* [Largest Bitonic Subarray](https://github.com/Divyessh/Hackerrank-Codes/blob/master/CPP/Largest_Bitonic_Subarray.cpp)
+* [Coloring Balls Problem](https://codeforces.com/problemset/problem/1395/A)
+* [Largest Bitonic Subarray](https://www.geeksforgeeks.org/longest-bitonic-subsequence-dp-15)
