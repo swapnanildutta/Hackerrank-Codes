@@ -1,0 +1,54 @@
+How to check pallindrome strings using the stacks concept of push pop and peep using arrays ?????? well answer is below 
+
+THE MAIN FILE -->
+& CHAR FILE IS ATTACHED IN ANOTHER FILE
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include"char.h"
+
+void rev(stack *s,char str[30])
+{
+	int i;
+	char str1[30];
+	int len=strlen(str);
+	for(i=0;i<len;i++)//push one by one char first to last of str
+		push(s,str[i]);
+	/*
+	 str="nist"
+	 push(s,'n')
+	 push(s,'i')
+	 push(s,'s')
+	 push(s,'t')
+	*/
+	for(i=0;s->top!=-1;i++)//it pop one by one char from the stack untill its not empty & add to str1
+	
+		str1[i]=pop(s);
+	/*
+		str1[0]='t';
+		str1[1]='s';
+		str1[2]='i';
+		str1[3]='n';
+		*/	
+	
+	printf("reverse is = %s \n",str1);
+	if(strcmp(str,str1)==0)
+  printf("It is pallindrome \n");
+  else
+  printf("It is not pallindrome \n");
+
+}
+int main()
+{
+ stack *s;
+ int x;
+ char str[30];
+ s=(stack*)malloc(sizeof(stack));
+ int num,op,item;
+ s->top=-1;
+printf("Enter string  : ");
+scanf("%s", str);
+ rev(s,str);
+ return 0;
+}
