@@ -56,3 +56,30 @@ if __name__ == '__main__':
     n = int(input())
 
 print([[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if(i+j+k)!=n])
+
+
+If else if ladder in list comprehension 
+# Original list of numbers.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# For loop to create a new list where we substitute all multiples of 2 by 0,
+# multiples of 3(which are not multiples of 2) by 1 and leave the rest as it is.
+modified_numbers = []
+for number in numbers:
+  if number % 2 == 0:
+    modified_numbers.append(0)
+  elif number % 3 == 0:
+    modified_numbers.append(1)
+  else:
+    modified_numbers.append(number)
+  
+# Rewrite using list comprehension.
+# Syntax: 
+#   list_object = [expression_1_on_item if_condition_1_on_item
+#                  else expression_2_on_item if_condition_2_on_item
+#                  else expression_3_on_item for_item_in_iterable]
+modified_numbers = [0 if number % 2 == 0 else 1 if number % 3 == 0
+                    else number for number in numbers]
+
+print(modified_numbers) # Output: [1, 0, 1, 0, 5, 0, 7, 0, 1, 0]
+ 
