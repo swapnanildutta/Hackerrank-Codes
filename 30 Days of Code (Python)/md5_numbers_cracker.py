@@ -7,7 +7,7 @@ counter = 1
 
 md5_pass = input("Enter md5 password: ")
 
-for i in np.arange(0.0, 11.0, 0.0000001):
+for i in np.arange(0.0, 1000000.0, 0.0000001):
     hash_obj = hashlib.md5(i)
     start = time.time()
     print("trying paasword %d -----> %s " % (counter, i))
