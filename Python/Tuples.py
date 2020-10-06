@@ -31,6 +31,8 @@ Sample Output 0
 
 
 '''
+The real use case of tuple is when we use tuple we cant change the elements in the tuple once we have assigned it and it is also used in the
+concepts of encryption of high secure passwords
 
 if __name__ == '__main__':
     n = int(input())
