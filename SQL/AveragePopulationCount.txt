@@ -1,0 +1,9 @@
+Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+Problem Link :https://www.hackerrank.com/challenges/average-population-of-each-continent/problem
+
+------------
+Query in MySQL
+-------------
+Select COUNTRY.CONTINENT,floor(avg(CITY.POPULATION)) as average from COUNTRY,CITY where CITY.COUNTRYCODE=COUNTRY.CODE group by CONTINENT order by average;
