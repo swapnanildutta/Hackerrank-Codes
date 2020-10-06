@@ -1,3 +1,4 @@
+//Find minimum product possible with the subset of elements present in the given array. 
 #include <bits/stdc++.h> 
 using namespace std; 
 
