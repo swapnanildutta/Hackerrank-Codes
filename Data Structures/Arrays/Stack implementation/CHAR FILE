@@ -1,0 +1,43 @@
+#define MAX 40
+
+typedef struct 
+{
+ char data[MAX];
+ int top;
+}stack;
+int isempty(stack *s)
+{
+ if(s->top==-1)
+      return(1);
+ else
+ 	  return(0);
+}
+int isfull(stack *s)
+{
+ if(s->top==MAX-1)
+     return(1);
+ else
+ 	 return(0);
+}
+void push(stack *s,char x)
+{
+	if(isfull(s))
+	{
+		printf("\nStack overflow");
+        exit(0);
+	}
+	s->top=s->top+1;
+ 	s->data[s->top]=x;
+}
+char pop(stack *s)
+{
+ char x;
+ if(isempty(s))
+ {
+ 	printf("\nStack underflow");
+    exit(0) ;
+ }
+ x=s->data[s->top];
+ s->top=s->top-1;
+ return(x);
+}
