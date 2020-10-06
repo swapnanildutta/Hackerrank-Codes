@@ -1,3 +1,4 @@
+#Goal is to predict final exam score by analysing the mid-sem marks.
 # This code is an introduction to linear regression.
 # I am taking "Mid-Sem Marks"(out of 100) as input data and make a model that predicts the marks of final exam.
 
