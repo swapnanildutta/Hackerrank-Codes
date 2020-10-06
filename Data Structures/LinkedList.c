@@ -1,3 +1,8 @@
+//This code represents linked list by using structure 'll'
+//Operations performed in the code are insertion of data in Linked List (in First, Middle and End), Deletion of data by it's value and display of the linked list.
+
+
+
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct ll
@@ -8,6 +13,8 @@ typedef struct ll
 node *FIRST=NULL;
 node *NEW=NULL;
 node *TEMP=NULL;
+
+//Insert in FIRST
 void insertF()
 {
 		int x;
@@ -25,6 +32,8 @@ void insertF()
 		}
 		FIRST=NEW;
 }
+
+//Insertion in END
 void insertE()
 {
 	int y;
@@ -40,6 +49,8 @@ void insertE()
 	TEMP->link=NEW;
 	NEW->link=NULL;
 }
+
+//Insertion in middle of Linked list at given place
 void insertM()
 {
 	int pl,x,count=0;
@@ -58,6 +69,8 @@ void insertM()
 	NEW->link=TEMP->link;
 	TEMP->link=NEW;
 }
+
+//Delete data by value
 void deldata()
 {
 	int x;
@@ -80,6 +93,8 @@ void deldata()
 		PRED->link=TEMP;
 	}
 }
+
+//Display Linked List
 void dis()
 {
 	TEMP=FIRST;
@@ -94,6 +109,7 @@ void dis()
 		
 	}
 }
+
 void main()
 {
 	int ch;
