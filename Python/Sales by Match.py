@@ -40,6 +40,7 @@ def sockMerchant(n, ar):
     return sum([ar.count(i)//2 for i in set(ar)])
 
 if __name__ == '__main__':
+    import os
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     n = int(input())
