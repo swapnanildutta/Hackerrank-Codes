@@ -20,6 +20,7 @@ def avg(*nums):
     return sum(nums)/len(nums)
 
 if __name__ == '__main__':
+    import os
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
     
     nums = list(map(int, input().split()))
