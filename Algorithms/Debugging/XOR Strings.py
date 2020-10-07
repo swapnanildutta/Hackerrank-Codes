@@ -36,10 +36,12 @@ Explanation
 
 The XOR of the two strings  and  is .
 '''
+
+# Change = to ==
+
 def strings_xor(s, t):
     res = ""
     for i in range(len(s)):
-      # Solution: change = to ==
         if s[i] == t[i]:
             res += '0';
         else:
