@@ -37,14 +37,14 @@ Explanation
 The XOR of the two strings  and  is .
 '''
 def strings_xor(s, t):
-  res = ""
-  for i in range(len(s)):
-    if s[i] == t[i]:
-      res += '0';
-    else:
-      res += '1';
-
-  return res
+    res = ""
+    for i in range(len(s)):
+      # Solution: change = to ==
+        if s[i] == t[i]:
+            res += '0';
+        else:
+            res += '1';
+    return res
 
 s = input()
 t = input()
