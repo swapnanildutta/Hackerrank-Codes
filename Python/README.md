@@ -2,12 +2,13 @@
 
 **Following Codes are Present**
 
-
+* [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
 * [Capitalize](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Capitalize!.py)
 * [Collections Counter](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsCounter.py)
 * [Collections Namedtuple](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsNamedtuple.py)
 * [Collections OrderedDict](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsOrderedDict.py)
 * [Compress the String](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compress%20the%20String.py)
+* [Day of the Programmer](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Day-of-the-Programmer.py)
 * [Else-If](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Else-If.py)
 * [Find a string](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Find%20a%20string.py)
 * [Finding The Percentage](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindingThePercentage.py)
@@ -20,8 +21,10 @@
 * [Leap Year](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/LeapYear.py)
 * [List Comprehension](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ListComprehensions.py)
 * [Mutations](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py)
+* [Mod Divmod](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ModDivmod.py)
 * [NestedLists](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/NestedLists.py)
 * [Mod Power](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Power%20-%20Mod%20Power.py)
+* [Polar Coordinates](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/Polar%20Coordinates.py)
 * [Set discard remove and copy](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Set%20.discard()%2C%20.remove()%20%26%20.pop().py)
 * [String Validators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/String%20Validators.py)
 * [swapcase](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/sWAPcASE.py)
