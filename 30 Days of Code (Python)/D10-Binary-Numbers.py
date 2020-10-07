@@ -62,5 +62,5 @@ import sys
 coun=0
 if __name__ == '__main__':
     n = int(input())
-b=str(bin(n))[2:].split('0')
-print(len(max(b)))
+    b=str(bin(n))[2:].split('0')  
+    print(len(max(b)))

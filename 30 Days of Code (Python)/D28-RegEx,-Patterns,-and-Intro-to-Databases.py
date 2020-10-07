@@ -72,5 +72,5 @@ if __name__ == '__main__':
         if emailID.endswith('@gmail.com'):
             det[emailID] = firstName
 
-for _ in sorted(det.values()):
-    print(_)
+    for _ in sorted(det.values()):
+        print(_)
