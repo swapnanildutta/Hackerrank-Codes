@@ -31,4 +31,4 @@
 * [Tuples](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Tuples.py)
 * [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
 * [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
-* [Triangle Quest 2](https://github.com/kunalgupta2616/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
+* [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
