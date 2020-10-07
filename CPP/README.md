@@ -7,3 +7,4 @@
 * [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
 * [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
+* [Attribute Parser](https://www.hackerrank.com/challenges/attribute-parser/problem)
