@@ -33,14 +33,12 @@ Explanation 1
 and is even, so it isn't weird. Thus, we print Not Weird.
 '''
 
-import math
-import os
-import random
-import re
-import sys
+try:
+    raw_input
+except NameError:
+    raw_input = input
 
-
-
+    
 if __name__ == '__main__':
     n = int(raw_input().strip())
     if n%2==0 and n<=5:
