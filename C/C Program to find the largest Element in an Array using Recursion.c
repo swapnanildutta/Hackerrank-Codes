@@ -2,9 +2,21 @@
 
 // #define is used to initialize a value which is more like a constant.
 
+// Problem Description
+// This program will implement a one-dimentional array defining elements in unsorted fashion,
+// in which we need to find largest element using Recursion method. 
+//  The array used here is of type integer.
 
+// To find the largest element,
+
+// the first two elements of array are checked and the largest of these two elements are placed in arr[i]
+// the first and third elements are checked and largest of these two elements is placed in arr[i].
+// this process continues until the first and last elements are checked
+// the largest number will be stored in the arr[i] position
+// We have used a for loop to accomplish this task.
 
 #include<stdio.h>
+#include<conio.h>
 
 #define MAX 100
 
@@ -13,7 +25,6 @@ int size;
 
 int main()
 {
-    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
     int arr[MAX], max, i;
     printf("\n\nEnter the size of the array: ");
     scanf("%d", &size);
