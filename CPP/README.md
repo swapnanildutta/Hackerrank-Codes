@@ -8,4 +8,4 @@
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
 * [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
 * [Attribute Parser](https://www.hackerrank.com/challenges/attribute-parser/problem)
-* [Inherited Code](https://www.hackerrank.com/challenges/inherited-code/problem)
+* [Vector Erase](https://www.hackerrank.com/challenges/vector-erase/problem)
