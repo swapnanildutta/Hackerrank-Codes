@@ -1,5 +1,4 @@
  //Below is a program to find the largest array element in a given array using recursion.
-
 // #define is used to initialize a value which is more like a constant.
 
 // Problem Description
