@@ -70,7 +70,7 @@ if __name__ == '__main__':
     for i in range(n):
         nums.append(int(input()))
     for _ in nums:
-        if _ == 1 or _ == 0:
+        if _ in (0, 1):
             print('Not prime')
         else:
             m=0
