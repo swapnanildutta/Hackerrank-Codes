@@ -41,17 +41,16 @@ The substring "010" does not occur in b, so the string is already beautiful and 
 '''
 #!/bin/python3
 
-import math
 import os
-import random
-import re
 import sys
 
 # Complete the beautifulBinaryString function below.
 def beautifulBinaryString(b):
     subs="010"
     change=0
-    for i in range(0, len(b)):
+    i=0
+    while i < len(b):
+        i+=1
         if b.find(subs) == -1 :
             return change
             break
