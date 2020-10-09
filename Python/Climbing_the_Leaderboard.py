@@ -1,4 +1,5 @@
 '''
+
 An arcade game player wants to climb to the top of the leaderboard and track their ranking. The game uses Dense Ranking, so its leaderboard works like this:
 
 The player with the highest score is ranked number 1 on the leaderboard.
@@ -28,13 +29,12 @@ The last line contains  space-separated integers , the game scores.
 
 Constraints
 
- for 
- for 
 The existing leaderboard, , is in descending order.
 The player's scores, , are in ascending order.
 Subtask
 
 For  of the maximum score:
+
 '''
 
 def climbingLeaderboard(scores, alice):
