@@ -52,7 +52,6 @@ def beautifulBinaryString(b):
         i+=1
         if b.find(subs) == -1 :
             return change
-            break
         else:
             ind=b.index(subs)
             print(ind)
