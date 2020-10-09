@@ -1,5 +1,5 @@
 # https://www.hackerrank.com/challenges/xor-se/problem
-# An array, A, is defined as follows:
+# An array, , is defined as follows:
 # A[0] = 0
 # A[x] = A[x-1]^x
 # for , where is the symbol for XOR
@@ -32,6 +32,7 @@
 # 15
 # Explanation 0
 # The beginning of our array looks like this: [0,1,3,0,4,1,7,0,8,...]
+
 import math
 import os
 import random
@@ -51,7 +52,6 @@ def xorSequence(l, r):
         if(a == 6 or a == 7):
             return 0;
     ans = A(l-1)^A(r)
-    return ans
 
 
 if __name__ == '__main__':
