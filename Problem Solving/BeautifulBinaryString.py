@@ -42,7 +42,6 @@ The substring "010" does not occur in b, so the string is already beautiful and 
 #!/bin/python3
 
 import os
-import sys
 
 # Complete the beautifulBinaryString function below.
 def beautifulBinaryString(b):
