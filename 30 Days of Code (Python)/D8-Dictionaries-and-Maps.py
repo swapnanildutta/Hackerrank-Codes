@@ -83,12 +83,12 @@ if __name__ == '__main__':
     for _ in range(n):
         w=input().split()
         d[w[0]]=w[-1]
-try:
-    while(q!=None):
-        q=input()
-        try:
-            print('{}={}'.format(q,d[q]))
-        except:
-            print('Not found')
-except:
-    exit()
+    try:
+        while(q!=None):
+            q=input()
+            try:
+                print('{}={}'.format(q,d[q]))
+            except:
+                print('Not found')
+    except:
+        exit()
