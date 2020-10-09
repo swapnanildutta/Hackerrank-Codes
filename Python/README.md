@@ -2,8 +2,8 @@
 
 **Following Codes are Present**
 
-
 * [Arithmetic Operators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ArithmeticOperators.py)
+* [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
 * [Capitalize](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Capitalize!.py)
 * [Collections Counter](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsCounter.py)
 * [Collections Namedtuple](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsNamedtuple.py)
@@ -11,6 +11,7 @@
 * [Compress the String](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compress%20the%20String.py)
 * [Day of the Programmer](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Day-of-the-Programmer.py)
 * [Else-If](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Else-If.py)
+* [Extra Long Factorials](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ExtraLongFactorials.py)
 * [Find a string](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Find%20a%20string.py)
 * [Finding The Percentage](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindingThePercentage.py)
 * [Find Second RunnerUp](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/FindSecondRunnerUp.py)
@@ -22,9 +23,11 @@
 * [Leap Year](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/LeapYear.py)
 * [List Comprehension](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ListComprehensions.py)
 * [Mod Divmod](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ModDivmod.py)
-* [Mutations]https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py()
+* [Mutations](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py)
 * [NestedLists](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/NestedLists.py)
 * [Mod Power](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Power%20-%20Mod%20Power.py)
+* [Polar Coordinates](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/Polar%20Coordinates.py)
+* [Queue using Two Stacks](https://github.com/bolajixi/Hackerrank-Codes/blob/Add_Queue-DoubleStack/Python/QueueUsingTwoStacks.py)
 * [Set discard remove and copy](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Set%20.discard()%2C%20.remove()%20%26%20.pop().py)
 * [String Validators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/String%20Validators.py)
 * [swapcase](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/sWAPcASE.py)
@@ -34,4 +37,4 @@
 * [Tuples](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Tuples.py)
 * [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
 * [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
-
+* [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
