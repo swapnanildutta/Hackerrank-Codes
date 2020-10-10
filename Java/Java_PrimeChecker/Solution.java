@@ -40,10 +40,10 @@ Sample Output
 
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-import java.lang.reflect.*;
+// import java.text.*;
+// import java.math.*;
+// import java.util.regex.*;
+// import java.lang.reflect.*;
 import static java.lang.System.in; //This is imported to use variable in line 70
 class Prime{
     void checkPrime(int ...a){
@@ -93,15 +93,15 @@ public class Solution {
 			set.add(methods[i].getName());
 			
 		}
-		if(overload)
-		{
-			throw new Exception("Overloading not allowed");
-		}
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
+		// if(overload)
+		// {
+		// 	throw new Exception("Overloading not allowed");
+		// }
+		// }
+		// catch(Exception e)
+		// {
+		// 	System.out.println(e);
+		// }
 	}
 	
 }
