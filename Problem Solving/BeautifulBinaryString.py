@@ -24,6 +24,7 @@ In this sample b="01100"
 Explanation 1
 The substring "010" does not occur in b, so the string is already beautiful and we print 0.
 """
+
 #!/bin/python3
 
 import os
