@@ -1,5 +1,4 @@
-"""
-Link to problem: https://www.hackerrank.com/challenges/py-introduction-to-sets/problem
+"""Link to problem: https://www.hackerrank.com/challenges/py-introduction-to-sets/problem
 
 Ms. Gabriel Williams is a botany professor at District College. One day, she asked her student Mickey to compute the average of all the plants with distinct heights in her greenhouse.
 
@@ -11,7 +10,7 @@ Input Format:
     The second line contains the N space separated heights of the plants.
 
 Constraints:
-    0 < N <= 100 
+    0 < N <= 100
 
 Output Format:
     Output the average height value on a single line.
@@ -24,7 +23,7 @@ Sample Output:
     169.375
 
 Explanation:
-    Here, set ([154, 161, 167, 170, 171, 174, 176, 182]) is the set containing the distinct heights. 
+    Here, set ([154, 161, 167, 170, 171, 174, 176, 182]) is the set containing the distinct heights.
     Using the sum() and len() functions, we can compute the average.
         Average = 1355 / 8 = 169.375
 """
