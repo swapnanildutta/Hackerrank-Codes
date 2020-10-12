@@ -7,6 +7,7 @@
 * [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem)
 * [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
+* [Messages Order](https://www.hackerrank.com/challenges/messages-order/problem)
 * [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
 * [Attribute Parser](https://www.hackerrank.com/challenges/attribute-parser/problem)
 * [Class template specialization](https://www.hackerrank.com/challenges/cpp-class-template-specialization/problem)
