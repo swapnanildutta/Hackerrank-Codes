@@ -1,4 +1,4 @@
-```
+'''
 A set is an unordered collection of elements without duplicate entries.
 When printed, iterated or converted into a sequence, its elements will appear in an arbitrary order.
 
@@ -56,7 +56,7 @@ Sample Output
 Explanation
 
 Here, set is the set containing the distinct heights. Using the sum() and len() functions, we can compute the average.
-```
+'''
 
 
 def average(arr):
