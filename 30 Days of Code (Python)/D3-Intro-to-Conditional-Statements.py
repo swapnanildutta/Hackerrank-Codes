@@ -82,4 +82,4 @@ if __name__ == '__main__':
         elif n in range(6,20+1):
             print('Weird')
         else:
-        print('Not Weird')
+            print('Not Weird')
