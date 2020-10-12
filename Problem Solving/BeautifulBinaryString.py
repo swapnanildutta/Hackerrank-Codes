@@ -1,37 +1,35 @@
-'''Alice has a binary string. She thinks a binary string is beautiful if and only if it doesnt contain the substring.
+#Alice has a binary string. She thinks a binary string is beautiful if and only if it doesnt contain the substring.
 
-In one step, Alice can change a  to a  or vice versa. Count and print the minimum number of steps needed to make Alice see the string as beautiful.
+#In one step, Alice can change a  to a  or vice versa. Count and print the minimum number of steps needed to make Alice see the string as beautiful.
 
-For example, if Alices string is  she can change any one element and have a beautiful string.
+#For example, if Alices string is  she can change any one element and have a beautiful string.
 
-Function Description: Complete the beautifulBinaryString function in the editor below. It should return an integer representing the minimum moves required.
+#Function Description: Complete the beautifulBinaryString function in the editor below. It should return an integer representing the minimum moves required.
 
-beautifulBinaryString has the following parameter(s):
-b: a string of binary digits
+#beautifulBinaryString has the following parameter(s):
+#b: a string of binary digits
 
-Input Format
-The first line contains an integer , the length of binary string.
-The second line contains a single binary string .
+#Input Format
+#The first line contains an integer , the length of binary string.
+#The second line contains a single binary string .
 
-Constraints
-1 <= n <= 100
-b[i] E {0,1}
+#Constraints
+#1 <= n <= 100
+#b[i] E {0,1}
 
-Output Format
-Print the minimum number of steps needed to make the string beautiful.
+#Output Format
+#Print the minimum number of steps needed to make the string beautiful.
 
-Sample Input 1
-5
-01100
-Sample Output 1
-0
+#Sample Input 1
+#5
+#01100
+#Sample Output 1
+#0
 
-Sample Case 1:
-In this sample b="01100"
-Explanation 1
-The substring "010" does not occur in b, so the string is already beautiful and we print 0.
-
-'''
+#Sample Case 1:
+#In this sample b="01100"
+#Explanation 1
+#The substring "010" does not occur in b, so the string is already beautiful and we print 0.
 
 #!/bin/python3
 
