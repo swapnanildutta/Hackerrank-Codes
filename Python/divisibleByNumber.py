@@ -1,6 +1,7 @@
 '''
 Task
 Create a list of numbers from 1 to 100 named list_1. The numbers should be present in the increasing order: Ex list_1 = [1,2,3,4,5,....,100]
+
 Given an input let's say a, you have to print the number of elements of list_1 which are divisible by a,  excluding the element which is equal to a.
 
 Input
