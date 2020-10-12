@@ -3,6 +3,7 @@
 **Following Codes are Present**
 
 * [Arithmetic Operators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ArithmeticOperators.py)
+* [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
 * [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
 * [Capitalize](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Capitalize!.py)
 * [Collections Counter](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsCounter.py)
