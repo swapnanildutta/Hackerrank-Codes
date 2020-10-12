@@ -35,6 +35,7 @@ def solve(s):
     return s.title()
 
 if __name__ == '__main__':
+    import os
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     s = input()
