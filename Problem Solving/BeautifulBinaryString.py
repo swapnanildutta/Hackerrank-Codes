@@ -1,6 +1,9 @@
-"""
-Alice has a binary string. She thinks a binary string is beautiful if and only if it doesnt contain the substring . 
-In one step, Alice can change a  to a  or vice versa. Count and print the minimum number of steps needed to make Alice see the string as beautiful. For example, if Alices string is  she can change any one element and have a beautiful string.
+'''
+Alice has a binary string. She thinks a binary string is beautiful if and only if it doesnt contain the substring.
+
+In one step, Alice can change a  to a  or vice versa. Count and print the minimum number of steps needed to make Alice see the string as beautiful.
+
+For example, if Alices string is  she can change any one element and have a beautiful string.
 
 Function Description: Complete the beautifulBinaryString function in the editor below. It should return an integer representing the minimum moves required.
 
@@ -28,13 +31,15 @@ Sample Case 1:
 In this sample b="01100"
 Explanation 1
 The substring "010" does not occur in b, so the string is already beautiful and we print 0.
-"""
+
+'''
 
 #!/bin/python3
 
 import os
 
 # Complete the beautifulBinaryString function below.
+
 def beautifulBinaryString(b):
     subs="010"
     change=0
