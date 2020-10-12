@@ -1,5 +1,4 @@
 # https://www.hackerrank.com/challenges/xor-se/problem
-
 # An array, , is defined as follows:
 # A[0] = 0
 # A[x] = A[x-1]^x
@@ -53,8 +52,7 @@ def xorSequence(l, r):
         if(a == 6 or a == 7):
             return 0;
     ans = A(l-1)^A(r)
-    return ans
-    
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

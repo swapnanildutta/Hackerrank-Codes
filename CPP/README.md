@@ -8,3 +8,4 @@
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
 * [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
 * [Attribute Parser](https://www.hackerrank.com/challenges/attribute-parser/problem)
+* [Class template specialization](https://www.hackerrank.com/challenges/cpp-class-template-specialization/problem)
