@@ -6,3 +6,4 @@
 - [Java Dynamic Array](https://www.hackerrank.com/challenges/dynamic-array/problem)
 - [Pattern Syntax Checker](https://www.hackerrank.com/challenges/pattern-syntax-checker/problem)
 - [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
+- [Java Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
