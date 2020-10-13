@@ -37,4 +37,4 @@
 * [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
 * [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
 * [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
-* [Birthday Cakes Candles] (https://github.com/swapnildutta/Hackerrank-Codes/Python/birthdaycandlescakes.py)
+* [Birthday Cakes Candles](https://github.com/swapnildutta/Hackerrank-Codes/Python/birthdaycandlescakes.py)
