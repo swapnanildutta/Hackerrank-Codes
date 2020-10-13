@@ -57,20 +57,15 @@
 
 from collections import defaultdict
 d = defaultdict(list)
-list1 = []
 
 n, m = map(int, input().split())
 
-for i in range(0, n):
-    d[input()].append(i+1)
+for i in range(1, n + 1):
+    d[input()].append(i)
 
-    for i in range(0, m):
-        list1 = list1+[input()]
-
-        for i in list1:
-            if i in d:
-                print(" ").join(map(str, d[i]))
-            else:
-                print -1 
-
-# This is the working code. Direct paste in compiler for code. Thank you!
+for i in range(0, m):
+    list_of_indices = d[input()]
+    if len(list_of_indices) == 0:
+        print(-1)
+    else:
+        print(*list_of_indices, sep=' ')
