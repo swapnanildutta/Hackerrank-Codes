@@ -45,8 +45,6 @@
 
 
 import os
-import sys
-
 
 # Complete the birthdayCakeCandles function below.
 def birthdayCakeCandles(ar):
