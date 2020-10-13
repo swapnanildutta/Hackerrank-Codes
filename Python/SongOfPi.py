@@ -55,18 +55,18 @@ The third case is already explained in the problem statement, but here we remove
 '''
 
  
-PI = map(int, list("31415926535897932384626433833"))
+PI = list("31415926535897932384626433833")
  
 def isPiSong(s):
     for idx, word in enumerate(s):
-        if len(word) != PI[idx]:
+        if len(word) != int(PI[idx]):
             return False   
     return True
      
 if __name__ == '__main__':
-    t = input()
+    t = int(input())
     for _ in range(t):
-        s = raw_input().split()
+        s = input().split()
         if isPiSong(s):
             print ("It's a pi song.")
         else:
