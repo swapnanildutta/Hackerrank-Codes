@@ -2,6 +2,8 @@
 
 **Following Codes are Present**
 
+* [Arithmetic Operators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ArithmeticOperators.py)
+* [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
 * [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
 * [Capitalize](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Capitalize!.py)
 * [Collections Counter](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsCounter.py)
@@ -22,7 +24,7 @@
 * [Leap Year](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/LeapYear.py)
 * [List Comprehension](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ListComprehensions.py)
 * [Mod Divmod](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ModDivmod.py)
-* [Mutations]https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py()
+* [Mutations](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py)
 * [NestedLists](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/NestedLists.py)
 * [Mod Power](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Power%20-%20Mod%20Power.py)
 * [Polar Coordinates](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/Polar%20Coordinates.py)
@@ -37,4 +39,7 @@
 * [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
 * [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
 * [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
+* [Introduction To Sets] (https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/IntroductionToSets.py)
+* [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
 * [Birthday Cakes Candles](https://github.com/swapnildutta/Hackerrank-Codes/Python/birthdaycandlescakes.py)
+
