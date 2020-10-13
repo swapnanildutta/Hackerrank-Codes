@@ -1,4 +1,4 @@
-# This is the working code of Default Dict Tutorial problem at Hackerrank in Python 2.
+# https://www.hackerrank.com/challenges/defaultdict-tutorial/problem
 
 # The default dict tool is a container in the collections class of Python. It's similar to the usual dictionary (dict) container, but the only difference is that a defaultdict will have a default value if that key has not been set yet. If you didn't use a defaultdict you'd have to check to see if that key exists, and if it doesn't, set it to what you want.
 # For example:
@@ -71,6 +71,6 @@ for i in range(0, n):
             if i in d:
                 print(" ").join(map(str, d[i]))
             else:
-                print -1
+                print -1 
 
 # This is the working code. Direct paste in compiler for code. Thank you!
