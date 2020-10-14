@@ -2,4 +2,5 @@
 
 ## Relational Algebra
 
- 1. [Basics of Sets and Relations](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Databases/Relational_Algebra/1_Basics_of_Sets_and_Relations.md)
+- [Basics of Sets and Relations #1](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Databases/Relational%20Algebra/01-BasicsOfSetsAndRelations.md)
+- [Basics of Sets and Relations #2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Databases/Relational%20Algebra/02-BasicsOfSetsAndRelations.md)
