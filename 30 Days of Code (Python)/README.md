@@ -1,4 +1,12 @@
-# 30 Days of Code
+<p align="center">
+  <a href=" https://www.hackerrank.com/domains/tutorials/30-days-of-code">
+    <img src="https://miro.medium.com/max/648/1*aZgzHh2RITeSGoiFqeqiHg.png" alt="Logo" height="90">
+  </a>
+<h1 align="center">30 Days of Code in Python</h3>
+<h4 align="center"> First try to attempt the problems on your own, these soulutions exist merely to guide you when you are stuck.</h4>
+<h5 align="center"> List of solutions currently available</h5>
+
+
 These are the programs given in the 30 Days of Code challenge on Hackerrank. Each program has a separate file and also contains part of the questions. I have written all the programs in Python3.
 
 ### [**Day 0 :**](/30-days-of-python/SwapnanilDutta_30DOC/D0-Hello-World.py) 
