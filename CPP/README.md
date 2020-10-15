@@ -1,4 +1,8 @@
-# CPP Codes for HackerRank
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/11183158/43805223-f23c1250-9a6c-11e8-9677-a45e08df2d7c.png" alt="Logo" width="80" height="80">
+  <h1 align="center">CPP Codes for HackerRank</h3>
+</p>
+
 ![GitHub contributors](https://img.shields.io/github/contributors/swapnanildutta/Hackerrank-Codes?style=plastic)
 ## Problems solved in C++
 * [Acessing Inherited Functions](https://www.hackerrank.com/challenges/accessing-inherited-functions/problem)
