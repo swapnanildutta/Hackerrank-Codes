@@ -40,5 +40,5 @@
 * [What's your name](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/What's%20Your%20Name.py)
 * [Word Order](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Word%20Order.py)
 * [Validating Email Addresses With a Filter](https://github.com/TechLead-21/Hackerrank-Codes/blob/master/Python/Validating%20Email%20Addresses%20With%20a%20Filter.py)
-* [Introduction To Sets] (https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/IntroductionToSets.py)
+* [Introduction To Sets](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/IntroductionToSets.py)
 * [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
