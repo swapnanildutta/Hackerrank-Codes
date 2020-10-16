@@ -69,15 +69,15 @@ if __name__ == '__main__':
     n = int(input())
     for i in range(n):
         nums.append(int(input()))
-for _ in nums:
-    if _ == 1 or _ == 0:
-        print('Not prime')
-    else:
-        m=0
-        for a in range(2,int(math.sqrt(_))+1):
-            if _%a == 0:
-                m+=1
-        if m == 0:
-            print('Prime')
-        else:
+    for _ in nums:
+        if _ in (0, 1):
             print('Not prime')
+        else:
+            m=0
+            for a in range(2,int(math.sqrt(_))+1):
+                if _%a == 0:
+                    m+=1
+            if m == 0:
+                print('Prime')
+            else:
+                print('Not prime')

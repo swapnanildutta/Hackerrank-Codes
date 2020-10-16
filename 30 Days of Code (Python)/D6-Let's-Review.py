@@ -69,13 +69,13 @@ if __name__ == '__main__':
     n = int(input())
     for i in range(n):
         words.append(input())
-for w in words:
-    odd,even='',''
-    for i in range(len(w)):
-        if i%2==0:
-            even+=w[i]
-        else:
-            odd+=w[i]
-    output.append((even,odd))
-for even,odd in output:
-    print(even,odd)
+    for w in words:
+        odd,even='',''
+        for i in range(len(w)):
+            if i%2==0:
+                even+=w[i]
+            else:
+                odd+=w[i]
+        output.append((even,odd))
+    for even,odd in output:
+        print(even,odd)

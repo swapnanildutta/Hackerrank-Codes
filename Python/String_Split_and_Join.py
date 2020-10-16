@@ -33,6 +33,11 @@ this-is-a-string
 
 """
 
+try:
+    raw_input
+except NameError:
+    raw_input = input
+
 def split_and_join(line):
     return "-".join(line.split(" "))
 
