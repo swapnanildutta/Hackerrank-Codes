@@ -7,3 +7,4 @@
 - [Pattern Syntax Checker](https://www.hackerrank.com/challenges/pattern-syntax-checker/problem)
 - [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
 - [Java Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
+- [Java Visitor pattern](https://www.hackerrank.com/challenges/java-vistor-pattern/problem)
