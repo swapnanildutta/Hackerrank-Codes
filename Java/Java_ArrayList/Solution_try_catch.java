@@ -19,14 +19,10 @@ Total number of integers in n lines will not cross 10^5.
 How to solve ?
 The idea is to create an array of ArrayList and answer the query in O(1) time.
 */
-import java.io.*;
-import java.util.*;
-import java.io.*;
 import java.util.*;
 
 public class Solution 
 {
-
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
