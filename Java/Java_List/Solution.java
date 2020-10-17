@@ -22,7 +22,6 @@ Constraints :
 1 <= Q <= 4000
 Each element in is a 32-bit integer.
 */
-import java.io.*;
 import java.util.*;
 
 public class Solution 
