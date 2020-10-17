@@ -47,31 +47,18 @@
 #include <stdlib.h>
 
 int main() {
-
-    int i,n,ar[10]={0};
-    char num[1000];
-    scanf("%s",num);
-    for(i=0;i<strlen(num);i++)
-    {
-        switch(num[i])
-        {
-            case '0':ar[0]++;break;
-            case '1':ar[1]++;break;
-            case '2':ar[2]++;break;
-            case '3':ar[3]++;break;
-            case '4':ar[4]++;break;
-            case '5':ar[5]++;break;
-            case '6':ar[6]++;break;
-            case '7':ar[7]++;break;
-            case '8':ar[8]++;break;
-            case '9':ar[9]++;break;
-            default : continue;
-        }
-    } 
-
-    for(i=0;i<10;i++)
-    {
-        printf("%d ",ar[i]);
+    char s[1000]; 
+    char map[10];
+    scanf("%s", &s);
+    int len = strlen(s);
+    
+    for (int i = 0; i < 10; i++) map[i] = 0;
+    
+    for (int i = 0; i < len; i++) {
+        int x = s[i] - '0';
+        if (x >= 0 && x <= 9) map[x]++;
     }
+    
+    for (int i = 0; i < 10; i++) printf("%d ", map[i]);
     return 0;
 }
