@@ -25,26 +25,28 @@ import java.util.*;
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class Solution 
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         ArrayList<Integer> al[] = new ArrayList[n];
-        for (int i = 0; i<n; i++)
+        for (int i = 0; i < n; i++)
         {
             int d = sc.nextInt();
             al[i] = new ArrayList<>();
-            for (int j =0;j<d;j++)
+            for (int j = 0; j < d; j++)
             {
                 int a = sc.nextInt();
                 al[i].add(a);
             }
         }
         int q = sc.nextInt();
-        for (int m=0; m<q;m++)
+        for (int m = 0; m < q; m++)
         {
-            int x = sc.nextInt() -1;
+            int x = sc.nextInt()-1;
             int y = sc.nextInt()-1;
             try 
             {
