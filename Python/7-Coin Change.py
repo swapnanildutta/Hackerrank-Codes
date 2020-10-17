@@ -119,7 +119,7 @@ print(count(arr, m, n))
 #   Largest amount A = (X * Y) - (X + Y)
 #   Total amount = (X -1) * (Y - 1) /2 
 
-  def gcd(a, b): 
+def gcd(a, b): 
     while (a != 0): 
         c = a; 
         a = b % a; 
