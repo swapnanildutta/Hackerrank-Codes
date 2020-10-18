@@ -59,3 +59,4 @@ Process 02:  If you want any specific program, open the code here and copy the c
 * [Validating Email Addresses With a Filter](https://github.com/TechLead-21/Hackerrank-Codes/blob/master/Python/Validating%20Email%20Addresses%20With%20a%20Filter.py)
 * [Introduction To Sets](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/IntroductionToSets.py)
 * [Triangle Quest 2](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/TriangleQuest2.py)
+* [Exceptions](https://www.hackerrank.com/challenges/exceptions/problem)
