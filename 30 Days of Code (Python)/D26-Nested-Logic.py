@@ -57,13 +57,13 @@ Per the library's fee structure, we know that our fine will be
 if __name__ == '__main__':
     given=input()
     expected=input()
-dg,mg,yg=[int(i) for i in given.split()]
-de,me,ye=[int(i) for i in expected.split()]
-if yg-ye > 0:
-    print(10000)
-elif yg==ye and mg-me > 0:
-    print(500*(mg-me))
-elif dg-de > 0 and yg==ye and mg==me:
-    print(15*(dg-de))
-else:
-    print(0)
+    dg,mg,yg=[int(i) for i in given.split()]
+    de,me,ye=[int(i) for i in expected.split()]
+    if yg-ye > 0:
+        print(10000)
+    elif yg==ye and mg-me > 0:
+        print(500*(mg-me))
+    elif dg-de > 0 and yg==ye and mg==me:
+        print(15*(dg-de))
+    else:
+        print(0)
