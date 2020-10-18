@@ -1,6 +1,5 @@
-"""
+"""The Coin Change Problem
 
-Title: The Coin Change Problem
 Category: Problem Solving - Dynamic Programming
 Difficulty: Medium
 Points: 60
