@@ -1,4 +1,5 @@
 """
+
 Title: The Coin Change Problem
 Category: Problem Solving - Dynamic Programming
 Difficulty: Medium
@@ -30,9 +31,9 @@ Each c[i] is guaranteed to be distinct.
 Hints:
 Solve overlapping subproblems using Dynamic Programming (DP):
 You can solve this problem recursively but will not pass all the test cases without optimizing to eliminate the overlapping subproblems. Think of a way to store and reference previously computed solutions to avoid solving the same subproblem multiple times. * Consider the degenerate cases:
-- How many ways can you make change for 0 cents? 
-- How many ways can you make change for cents if you have no coins? 
-* If you're having trouble defining your solutions store, then think about it in terms of the base case . 
+- How many ways can you make change for 0 cents?
+- How many ways can you make change for cents if you have no coins?
+* If you're having trouble defining your solutions store, then think about it in terms of the base case .
 - The answer may be larger than a 32-bit integer.
 
 Output Format:
@@ -56,6 +57,7 @@ There are five ways to make changes for n = 10 units using coins with values giv
     5. {5, 5}
 
 Thus, we print 5 as our answer.
+
 """
 
 # ------------------------------------------------------------
