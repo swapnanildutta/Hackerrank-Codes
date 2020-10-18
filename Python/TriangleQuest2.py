@@ -12,6 +12,10 @@ For example, a palindromic triangle of size 5 is:
 You can't take more than two lines. The first line (a for-statement) is already written for you.
 You have to complete the code using exactly one print statement.
 
+
+You can't take more than two lines. The first line (a for-statement) is already written for you.
+You have to complete the code using exactly one print statement.
+
 Note:
 Using anything related to strings will give a score of 0.
 Using more than one for-statement will give a score of 0.
@@ -32,6 +36,26 @@ Sample Input
 5
 Sample Output
 
+=======
+
+Input Format
+A single line of input containing the integer N.
+
+
+Constraints
+• 0<N<10
+
+
+Output Format
+Print the palindromic triangle of size N as explained above.
+
+
+Sample Input
+5
+
+
+Sample Output
+
 1
 121
 12321
@@ -40,7 +64,12 @@ Sample Output
 """
 
 
+
 #Solution
 
 for i in range(1,int(input())+1):
     print(([1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111][i-1])**2) 
+=======
+for i in range(1,int(input())+1):
+    print(([1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111][i-1])**2)
+
