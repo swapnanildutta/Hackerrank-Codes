@@ -3,4 +3,6 @@
   <h1 align="center">C Programs</h3>
 </p>
 Following codes are present:
-  - [digitfrequency](https://github.com/kirtish16/Hackerrank-Codes/blob/master/C/digitfrequency.c)
+
+* [digitfrequency](https://www.hackerrank.com/challenges/frequency-of-digits-1/problem)
+* [SmallTrianglesLargeTriangles](https://www.hackerrank.com/challenges/small-triangles-large-triangles/problem)
