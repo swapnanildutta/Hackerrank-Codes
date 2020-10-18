@@ -2,6 +2,7 @@
 
 **Following Codes are Present**
 
+* [Alphabet Rangoli](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/AlphabetRangoli.py)
 * [Arithmetic Operators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ArithmeticOperators.py)
 * [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
 * [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
