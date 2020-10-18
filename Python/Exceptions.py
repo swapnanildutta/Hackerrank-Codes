@@ -61,13 +61,14 @@ Error Code: invalid literal for int() with base 10: '$'
 3
 """
 
-n = int(input())
+if __name__ == '__main__':
+    n = int(input())
 
-for i in range(n):
-    try:
-        a,b = list(map(int, input().split()))
-        print(a//b)
-    except ZeroDivisionError as e:
-        print('Error Code:',e)
-    except ValueError as e:
-        print('Error Code:',e)
+    for i in range(n):
+        try:
+            a,b = list(map(int, input().split()))
+            print(a//b)
+        except ZeroDivisionError as e:
+            print('Error Code:', e)
+        except ValueError as e:
+            print('Error Code:', e)
