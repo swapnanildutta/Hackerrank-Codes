@@ -1,4 +1,4 @@
-'''
+"""
 Exceptions
 
 Examples:
@@ -59,7 +59,7 @@ Sample Output
 Error Code: integer division or modulo by zero
 Error Code: invalid literal for int() with base 10: '$'
 3
-'''
+"""
 
 n = int(input())
 
