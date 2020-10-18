@@ -77,7 +77,7 @@ def print_rangoli(n):
     letter_count = dict(zip(string.ascii_lowercase, [0]*26))
     alph =  list([key for key  in letter_count.keys()])
     d = (n-1)*2
-    k = n-1 
+    k = n-1
     f = 0
     for i in range(n):
         k-=1
