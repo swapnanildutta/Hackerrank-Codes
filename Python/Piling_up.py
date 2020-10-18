@@ -42,20 +42,10 @@
 #In the second test case, no order gives an appropriate
 #arrangement of vertical cubes.  will always come after either  or . 
 
-def Solution(lst):
-  pile = float('inf')
-  while lst:
-    num = lst.pop(0) if lst[0] > lst[-1] else lst.pop(-1)
-    if num > pile:
-      return "No"
-    pile = num
-  return "Yes"
-def main():
-  t = int(input())
-  for _ in range(t):
-    n = int(input())
-    lst = list(map(int, input().strip().split()))
-    print(Solution(lst))
-
-if __name__ == "__main__":
-  main()
+for _ in (range(int(input()))):
+    no_of_cubes = int(input())
+    side_lengths = list(map(int, input().strip().split()))
+    result = "Yes"
+    if max(side_lengths) not in (side_lengths[0], side_lengths[-1]):
+        result = "No"
+    print(result)
