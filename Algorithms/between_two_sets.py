@@ -21,4 +21,3 @@ for i in range(max(a),min(b)+1):
             if k%i!=0: break
         else: ct+=1
 print(ct)
-    
