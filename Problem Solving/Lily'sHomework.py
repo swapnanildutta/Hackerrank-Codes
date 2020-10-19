@@ -40,6 +40,11 @@ Sample Output
 2
 """
 
+try:
+    raw_input
+except NameError:
+    raw_input = input
+
 def solution(a):
 
     m = {}
