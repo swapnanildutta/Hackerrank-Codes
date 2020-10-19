@@ -6,4 +6,4 @@
 **Following codes are present:**
 
 *  [Digitfrequency](https://github.com/kirtish16/Hackerrank-Codes/blob/master/C/digitfrequency.c)
-*  [C Program to find the largest Element in an Array using Recursion](https://github.com/swapnildutta/Hackerrank-Codes/blob/add-c/C/C%20Program%20to%20find%20the%20largest%20Element%20in%20an%20Array%20using%20Recursion.c)
+*  [C Program to find the largest Element in an Array using Recursion](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/C/C%20Program%20to%20find%20the%20largest%20Element%20in%20an%20Array%20using%20Recursion.c)
