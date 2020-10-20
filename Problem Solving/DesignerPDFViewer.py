@@ -47,6 +47,7 @@ Note: Recall that the width of each character is 1mm.
 
 '''
 #!/bin/python3
+import os
 
 # Complete the designerPdfViewer function below.
 def designerPdfViewer(h, word):
