@@ -34,6 +34,7 @@
 #!/bin/python3
 
 # Complete the beautifulDays function below.
+import os
 def beautifulDays(i, j, k):
     strr=[]
     for elm in range(i,j+1):
