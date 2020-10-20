@@ -45,7 +45,7 @@ def beautifulDays(i, j, k):
         rstr.append(relm[::-1])
     print(rstr)
     ctr=0
-    for ind in range(len(strr)):
+    for ind, elm in enumerate(strr):
         sol=(abs(int(strr[ind])-int(rstr[ind]))/k)
         if int(sol)==sol:
             ctr+=1
