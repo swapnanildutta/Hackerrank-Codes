@@ -62,8 +62,8 @@ def designerPdfViewer(h, word):
     for elm in asc:
         chval.append(h[elm])
     print(chval)
-    return len(word)*max(chval)   
-    
+    return len(word)*max(chval)
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
