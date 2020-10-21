@@ -1,2 +1,13 @@
 # Java
+
+- [Java String Compare](https://www.hackerrank.com/challenges/java-string-compare/problem)
+- [Java Comparator](https://www.hackerrank.com/challenges/java-comparator/problem)
+- [Java Anagrams](https://www.hackerrank.com/challenges/java-anagrams/problem)
+- [Java List](https://www.hackerrank.com/challenges/java-list/problem)
+- [Java ArrayList](https://www.hackerrank.com/challenges/java-arraylist/problem)
+- [Java Stack Parenthesis](https://www.hackerrank.com/challenges/java-stack/problem)
+- [Java Dynamic Array](https://www.hackerrank.com/challenges/dynamic-array/problem)
+- [Pattern Syntax Checker](https://www.hackerrank.com/challenges/pattern-syntax-checker/problem)
+- [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
+- [Java Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
 - [Java Comparator](https://www.hackerrank.com/challenges/java-comparator/problem)

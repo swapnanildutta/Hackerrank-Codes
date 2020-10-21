@@ -41,7 +41,7 @@ def minion_game(string):
         print("Draw")
 
 #Note :- The Answer is to put directly in the compiler (Any Python compiler)
-=======
+# =======
 #Type 2
 '''
     Kevin and Stuart want to play the 'The Minion Game'.
