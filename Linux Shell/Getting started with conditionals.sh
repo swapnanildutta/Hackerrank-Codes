@@ -11,5 +11,7 @@
 
 # echo YES or NO to STDOUT.
 
+#!/bin/bash
+
 read c
 [[ "$c" == [yY] ]] && echo "YES" || echo "NO"

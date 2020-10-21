@@ -15,6 +15,8 @@
 #.
 #50
 
+#!/bin/bash
+
 X=1
 while [ $X -le 50 ]
 do

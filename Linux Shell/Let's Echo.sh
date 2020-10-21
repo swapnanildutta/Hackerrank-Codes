@@ -8,4 +8,6 @@
 
 #HELLO
 
+#!/bin/bash
+
 echo "HELLO"

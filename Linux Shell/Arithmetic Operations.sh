@@ -8,9 +8,9 @@
 
 # 17.929
 
-read p1
-read p2
-read p3
+#!/bin/bash
 
-printf "%.3f\n" `echo $p1 | bc -l`
+read p1
+
+printf "%.3f\n" $(echo "$p1" | bc -l)
 
