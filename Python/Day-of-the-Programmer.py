@@ -16,7 +16,7 @@ As I have pointed out in the past, no engineer should ever implement any calenda
 I am fairly certain that the conventions will change by 2700 🙂 and the calculation will be invalid.
 
 '''
-
+'''
 # Solution:
 
 #!/bin/python
@@ -42,7 +42,7 @@ if __name__ == '__main__':
  
     fptr.close()
 
-  
+'''
 '''
 Day - of - the - Programmer
 
