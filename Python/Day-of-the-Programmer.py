@@ -34,7 +34,7 @@ def dayOfProgrammer(year):
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
  
-    year = int(raw_input().strip())
+    year = int(input().strip())
  
     result = dayOfProgrammer(year)
  
