@@ -1,5 +1,5 @@
 # Java
-- [Java Welcome!](https://www.hackerrank.com/challenges/welcome-to-java/problem)
+- [Java Welcome to Java!](https://www.hackerrank.com/challenges/welcome-to-java/problem)
 - [Java String Compare](https://www.hackerrank.com/challenges/java-string-compare/problem)
 - [Java Comparator](https://www.hackerrank.com/challenges/java-comparator/problem)
 - [Java Anagrams](https://www.hackerrank.com/challenges/java-anagrams/problem)
