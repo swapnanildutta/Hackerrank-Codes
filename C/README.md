@@ -6,3 +6,4 @@ Following codes are present
 
   * [digitfrequency](https://www.hackerrank.com/challenges/frequency-of-digits-1/problem)
   *	[SmallTrianglesLargeTriangles](https://www.hackerrank.com/challenges/small-triangles-large-triangles/problem)
+  * [VariadicFunctions](https://www.hackerrank.com/challenges/variadic-functions-in-c/problem)
