@@ -11,6 +11,7 @@
 
 # One word: either "SCALENE" or "EQUILATERAL" or "ISOSCELES" (quotation marks excluded).
 
+#!/bin/bash
 
 read c1
 read c2

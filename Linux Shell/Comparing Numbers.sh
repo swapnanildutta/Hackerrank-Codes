@@ -16,6 +16,8 @@
 #- X is greater than Y
 #- X is equal to Y
 
+#!/bin/bash
+
 read firstNumber
 read secondNumber
 if (($firstNumber > $secondNumber)); then

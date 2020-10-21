@@ -9,6 +9,8 @@
 #One line: "Welcome (name)" (quotation marks excluded).
 #The evaluation will be case-sensitive.
 
+#!/bin/bash
+
 read name
 echo "Welcome $name"
 
