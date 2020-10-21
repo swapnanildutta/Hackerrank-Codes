@@ -11,3 +11,4 @@
 - [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
 - [Java Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
 - [Java Comparator](https://www.hackerrank.com/challenges/java-comparator/problem)
+- [Java Maximum Draws](https://www.hackerrank.com/challenges/maximum-draws/problem)
