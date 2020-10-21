@@ -8,7 +8,6 @@ func solveApplesOranges(values: [Int], apples: [Int], oranges: [Int]) {
     neworanges = oranges.map {values[3] + $0}
     newapples = newapples.filter {$0 >= values[0] && $0 <= values[2]}
     neworanges = neworanges.filter {$0 >= values[0] && $0 <= values[1]}
-    
     print(neworanges.count)
     print(neworanges.count)
 }
