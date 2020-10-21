@@ -4,12 +4,11 @@
 
 #Given the individual calorie counts for each of the cupcakes, determine the minimum number of miles Marc must walk to maintain his weight. Note that he can eat the cupcakes in any order.
 
-#Function Description
+#Function Description:
 
 #Complete the marcsCakewalk function in the editor below. It should return a long integer that represents the minimum miles necessary.
 
 #marcsCakewalk has the following parameter(s):
-
 #calorie: an integer array that represents calorie count for each cupcake
 
 #Input Format
