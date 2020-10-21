@@ -1,13 +1,11 @@
-"""
-Write a bash script which does just one thing: saying 'HELLO'.
+#Write a bash script which does just one thing: saying 'HELLO'.
 
-Input Format
+#Input Format
 
-There is no input file required for this problem.
+#There is no input file required for this problem.
 
-Output Format
+#Output Format
 
-HELLO
+#HELLO
 
-"""
 echo "HELLO"
