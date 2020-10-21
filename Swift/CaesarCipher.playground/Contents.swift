@@ -8,14 +8,14 @@ func encryptInput(input: String, rotation: Int) -> String {
         // is lowercased letter
         if (97...122).contains(char.value) {
             code += rotation
-            while (code > 122) {
+            while code > 122 {
                 // reduce until in char range
                 code -= (122 - 96)
             }
         // is uppercased letter
         } else if (65...90).contains(char.value) {
             code += rotation
-            while (code > 90) {
+            while code > 90 {
                 // reduce until in char range
                 code -= (90 - 64)
             }
