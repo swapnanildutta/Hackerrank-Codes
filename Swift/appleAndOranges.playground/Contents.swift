@@ -4,7 +4,6 @@
 func solveApplesOranges(values: [Int], apples: [Int], oranges: [Int]) {
     var newapples = [Int]()
     var neworanges = [Int]()
-    
     newapples = apples.map {values[2] + $0}
     neworanges = oranges.map {values[3] + $0}
     newapples = newapples.filter {$0 >= values[0] && $0 <= values[2]}
