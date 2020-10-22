@@ -51,7 +51,7 @@ def alternatingCharacters(s):
         l.append(ch)
     a=[]
     a=l
-    for i in range(0, len(l)):
+    for i,tq in enumerate(l):
         for j in range(i+1, len(l)):
            if(l[i] == l[j]):
                 a[j]=0
@@ -59,7 +59,7 @@ def alternatingCharacters(s):
                 break
     for i in a:
         if(i==0):
-            ct+=1        
+            ct+=1
     return ct
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
