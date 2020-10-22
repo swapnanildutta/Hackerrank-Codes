@@ -24,4 +24,4 @@
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
 * [Drawing Book](https://www.hackerrank.com/challenges/drawing-book/problem)
 * [Pointer Introduction](https://www.hackerrank.com/challenges/c-tutorial-pointer/problem)
-* [Sales By Match](https://www.hackerrank.com/challenges/sock-merchant/problem)
+*  [Sales By Match](https://www.hackerrank.com/challenges/sock-merchant/problem)
