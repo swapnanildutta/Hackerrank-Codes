@@ -14,7 +14,7 @@
 #Input Format
 
 #The first line contains an integer q, the number of queries.
-T#he next q lines each contain a string s.
+#The next q lines each contain a string s.
 
 #Constraints
 #1<=q<=10
