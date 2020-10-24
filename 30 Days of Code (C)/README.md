@@ -1,6 +1,6 @@
 <p align="center">
   <a href=" https://www.hackerrank.com/domains/tutorials/30-days-of-code">
-    <img src="https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/styleguide/logo_wordmark-f5c5eb61ab0a154c3ed9eda24d0b9e31.svg" alt="Logo" width="250" height="250">
+    <img src="https://miro.medium.com/max/648/1*aZgzHh2RITeSGoiFqeqiHg.png" alt="Logo" height="120">
   </a>
 <h3 align="center">30 Days of Code (C)</h3>
 <h4 align="center"> First try to attempt the problems on your own, these soulutions exist merely to guide you when you are stuck.</h4>
