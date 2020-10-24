@@ -51,7 +51,8 @@ def alternatingCharacters(s):
         l.append(ch)
     a=[]
     a=l
-    for i,tq in enumerate(l):
+    length= len(l)
+    for i in range(length):
         for j in range(i+1, len(l)):
            if(l[i] == l[j]):
                 a[j]=0
