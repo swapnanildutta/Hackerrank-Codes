@@ -19,7 +19,7 @@
 #a<=q<=10
 #2<= |s| <= 10000
 
-Output Format
+#Output Format
 #For each string s print whether it is Funny or Not Funny on a new line.
 
 #Sample Input
