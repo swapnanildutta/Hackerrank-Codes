@@ -25,6 +25,7 @@ Process 02:  If you want any specific program, open the code here and copy the c
 * [Collections Counter](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsCounter.py)
 * [Collections Namedtuple](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsNamedtuple.py)
 * [Collections OrderedDict](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/CollectionsOrderedDict.py)
+* [Compare the Triplets](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compare%20the%20Triplets.py)
 * [Compress the String](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Compress%20the%20String.py)
 * [Day of the Programmer](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Day-of-the-Programmer.py)
 * [DesignerDoorMat] (https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/DesignerDoorMat.py)
