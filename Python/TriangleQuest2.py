@@ -75,7 +75,7 @@ for n in range(1,int(input())+1): #More than 2 lines will result in 0 score. Do 
 
 for i in range(1,int(input())+1):
     print(([1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111][i-1])**2) 
-=======
+
 for i in range(1,int(input())+1):
     print(([1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111][i-1])**2)
 
