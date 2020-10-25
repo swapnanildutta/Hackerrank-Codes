@@ -34,7 +34,9 @@ Sample Output 0
 1 23 12
 Explanation 0
 
-The details are sorted based on the second attribute, since K is zero-indexed.'''
+The details are sorted based on the second attribute, since K is zero-indexed.
+'''
+#!/bin/python3
 
 def sortingCriteria(arr):
     return arr[k]
