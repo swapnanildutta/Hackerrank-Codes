@@ -17,8 +17,9 @@ Process 02:  If you want any specific program, open the code here and copy the c
 
 **Following Codes are Present**
 
-*  [Alphabet Rangoli](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/AlphabetRangoli.py)
+* [Alphabet Rangoli](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/AlphabetRangoli.py)
 * [Arithmetic Operators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ArithmeticOperators.py)
+* [Athlete Sort](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Athlete%20Sort.py)
 * [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
 * [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
 * [Capitalize](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Capitalize!.py)
