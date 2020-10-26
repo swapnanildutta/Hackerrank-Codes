@@ -1,5 +1,5 @@
 # Java
-
+- [Java Welcome to Java!](https://www.hackerrank.com/challenges/welcome-to-java/problem)
 - [Java String Compare](https://www.hackerrank.com/challenges/java-string-compare/problem)
 - [Java Comparator](https://www.hackerrank.com/challenges/java-comparator/problem)
 - [Java Anagrams](https://www.hackerrank.com/challenges/java-anagrams/problem)
@@ -7,6 +7,11 @@
 - [Java ArrayList](https://www.hackerrank.com/challenges/java-arraylist/problem)
 - [Java Stack Parenthesis](https://www.hackerrank.com/challenges/java-stack/problem)
 - [Java Dynamic Array](https://www.hackerrank.com/challenges/dynamic-array/problem)
+- [Java Pattern Syntax Checker](https://www.hackerrank.com/challenges/pattern-syntax-checker/problem)
+- [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
+- [Java Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
+- [Java Comparator](https://www.hackerrank.com/challenges/java-comparator/problem)
+- [Java Maximum Draws](https://www.hackerrank.com/challenges/maximum-draws/problem)
 - [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
 - [Left Rotation](https://www.hackerrank.com/challenges/array-left-rotation/problem)
 - [Pattern Syntax Checker](https://www.hackerrank.com/challenges/pattern-syntax-checker/problem)
