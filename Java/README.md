@@ -12,6 +12,8 @@
 - [Java Regex](https://www.hackerrank.com/challenges/java-regex/problem)
 - [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
 - [Java Stack Parenthesis](https://www.hackerrank.com/challenges/java-stack/problem)
+- [Java Stdin and Stdout (1)](https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem)
+- [Java Stdin and Stdout (2)](https://www.hackerrank.com/challenges/java-stdin-and-stdout-2/problem)
 - [Java String Compare](https://www.hackerrank.com/challenges/java-string-compare/problem)
 - [Java Visitor pattern](https://www.hackerrank.com/challenges/java-vistor-pattern/problem)
 - [Java Welcome to Java!](https://www.hackerrank.com/challenges/welcome-to-java/problem)
