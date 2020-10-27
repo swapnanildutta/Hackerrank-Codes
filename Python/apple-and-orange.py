@@ -13,7 +13,7 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
     for apl in apples:
         if in_range(apl + a, s, t):
             a_cnt = a_cnt + 1
-    
+
     for ong in oranges:
         if in_range(ong + b, s, t):
             o_cnt = o_cnt + 1
