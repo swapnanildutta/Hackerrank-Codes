@@ -42,6 +42,7 @@ Process 02:  If you want any specific program, open the code here and copy the c
 - [Mutations](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Mutations.py)
 - [NestedLists](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/NestedLists.py)
 - [Mod Power](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Power%20-%20Mod%20Power.py)
+- [Piling Up!](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/piling-up.py)
 - [Polar Coordinates](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/Polar%20Coordinates.py)
 - [Queue using Two Stacks](https://github.com/bolajixi/Hackerrank-Codes/blob/Add_Queue-DoubleStack/Python/QueueUsingTwoStacks.py)
 - [Set discard remove and copy](<https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/Set%20.discard()%2C%20.remove()%20%26%20.pop().py>)
