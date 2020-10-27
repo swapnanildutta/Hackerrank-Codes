@@ -50,12 +50,7 @@ For the second test case, k=2. The professor wants at least 2 students in attend
 */ 
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 public class Solution {
 
