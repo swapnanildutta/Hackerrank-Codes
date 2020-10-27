@@ -9,6 +9,7 @@
 - [Java Mini-Max Sum](https://www.hackerrank.com/challenges/mini-max-sum/problem)
 - [Java Pattern Syntax Checker](https://www.hackerrank.com/challenges/pattern-syntax-checker/problem)
 - [Java Prime Checker](https://www.hackerrank.com/challenges/prime-checker/problem)
+- [Java Regex](https://www.hackerrank.com/challenges/java-regex/problem)
 - [Java Sort](https://www.hackerrank.com/challenges/java-sort/problem)
 - [Java Stack Parenthesis](https://www.hackerrank.com/challenges/java-stack/problem)
 - [Java String Compare](https://www.hackerrank.com/challenges/java-string-compare/problem)
