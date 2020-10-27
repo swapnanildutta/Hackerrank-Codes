@@ -1,55 +1,28 @@
+# Given an integer array, the task is to find and print the first non-repeating element in it.
 
-Given an integer array, the task is to find and print the first non-repeating element in it.
+# Input Format
 
-Input Format
+# First line of the input contains an integer T, denoting the number of test cases.Then T test cases follow. Each test case consists of two lines. First line of each test case contains integer N denoting the size of array. Second line of each test case contains N space separated integers (Ki) denoting the elements of the array.
 
-First line of the input contains an integer T, denoting the number of test cases.Then T test cases follow. Each test case consists of two lines. First line of each test case contains integer N denoting the size of array. Second line of each test case contains N space separated integers (Ki) denoting the elements of the array.
+# Constraints
 
-Constraints
+# 1<= T <= 100 2<= N <= 20 1<= K <= 50
 
-1<= T <= 100 2<= N <= 20 1<= K <= 50
+# Output Format
 
-Output Format
+# Integer
 
-Integer
+# Sample Input 0
 
-Sample Input 0
+# 1
 
-1
+# 5
 
-5
+# 1 1 2 2 3
 
-1 1 2 2 3
+# Sample Output 0
 
-Sample Output 0
-
-3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 3
 
 n = int(input())
 for i in range(n):
