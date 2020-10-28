@@ -22,6 +22,7 @@
 * [Snakes Ladder Game](https://www.hackerrank.com/challenges/the-quickest-way-up/problem)
 * [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)
 * [The Maximum Subarray](https://www.hackerrank.com/challenges/maxsubarray/problem)
+* [The Power Sum](https://www.hackerrank.com/challenges/the-power-sum/problem)
 * [Ice Cream Parlor](https://www.hackerrank.com/challenges/icecream-parlor/problem)
 * [Drawing Book](https://www.hackerrank.com/challenges/drawing-book/problem)
 * [Pointer Introduction](https://www.hackerrank.com/challenges/c-tutorial-pointer/problem)
