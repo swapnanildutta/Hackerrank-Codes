@@ -16,6 +16,7 @@
 * [Largest Bitcoin Subarray]
 * [Matrix](https://www.hackerrank.com/challenges/matrix/problem)
 * [Messages Order](https://www.hackerrank.com/challenges/messages-order/problem)
+* [Sales By Match](https://www.hackerrank.com/challenges/sock-merchant/problem)
 * [Multi Level Inheritance](https://www.hackerrank.com/challenges/multi-level-inheritance-cpp/problem)
 * [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem)
 * [Restaurant](https://www.hackerrank.com/challenges/restaurant/problem)
