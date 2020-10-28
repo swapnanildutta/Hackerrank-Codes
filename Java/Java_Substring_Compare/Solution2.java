@@ -27,7 +27,7 @@ QUESTION LINK: https://www.hackerrank.com/challenges/java-string-compare/problem
 SOLUTION IN JAVA
 import java.util.Scanner;
 
-public class Solution {
+public class Solution2 {
 
     public static String getSmallestAndLargest(String s, int k) {
         String smallest = "";
