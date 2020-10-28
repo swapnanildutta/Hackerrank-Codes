@@ -17,6 +17,7 @@ Process 02:  If you want any specific program, open the code here and copy the c
 
 **Following Codes are Present**
 
+- [Apples and Oranges](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/apple-and-orange.py)
 - [Arithmetic Operators](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/ArithmeticOperators.py)
 - [Bigger is Greater](https://github.com/swapnanildutta/Hackerrank-Codes/blob/master/Python/bigger-is-greater.py)
 - [Calendar](https://github.com/wanda15tw/Hackerrank-Codes/blob/Python/CalendarModule/Python/CalendarModule.py)
