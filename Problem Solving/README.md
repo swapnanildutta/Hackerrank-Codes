@@ -12,3 +12,4 @@
 - [Apple and Oranges](https://www.hackerrank.com/challenges/apple-and-orange/problem)
 - [Pairs](https://www.hackerrank.com/challenges/pairs/problem) (Difficulty - Medium)(Points - 50)
 - [Repeated Strings](https://www.hackerrank.com/challenges/repeated-string/problem) (Difficulty - Easy)(Points - 20)
+- [Organizing Containers of Balls](https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem) (Difficulty - Medium)(Points - 30)
