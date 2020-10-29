@@ -14,3 +14,4 @@
 - [Repeated Strings](https://www.hackerrank.com/challenges/repeated-string/problem) (Difficulty - Easy)(Points - 20)
 - [Organizing Containers of Balls](https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem) (Difficulty - Medium)(Points - 30)
 - [A Very Big Sum](https://www.hackerrank.com/challenges/a-very-big-sum/problem) (Difficulty - Easy)(Points - 10)
+- [Forming a magic square](https://www.hackerrank.com/challenges/magic-square-forming/problem)(Difficulty - Medium)(Points - 20)
