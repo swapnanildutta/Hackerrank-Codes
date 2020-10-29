@@ -87,6 +87,8 @@ void flipSquare(char *square)
     square[6] = tmp[0];
     square[7] = tmp[1];
     square[8] = tmp[2];
+  
+    free(tmp);
 }
 // Rotate the square
 void rotateSquare(char *square, char rotation)
@@ -125,6 +127,8 @@ void rotateSquare(char *square, char rotation)
         square[8] = tmp[1];
         square[5] = tmp[0];
     }
+  
+    free(tmp);
 }
 
 /*
@@ -139,7 +143,6 @@ int formingMagicSquare(int x, int y, int **s)
         4, 3, 8};
     char *ptr = exampleSequence;
     int cost = 0;
-    int tmp = 0;
     int counter = 0;
 
     //Initialize cost
@@ -152,7 +155,7 @@ int formingMagicSquare(int x, int y, int **s)
     }
     while (1)
     {
-        tmp = 0;
+        int tmp = 0;
         for (int n = 0; n < 9; n++)
         {
             if (s[(n / 3)][(n % 3)] != exampleSequence[n])
