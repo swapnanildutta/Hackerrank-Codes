@@ -35,6 +35,7 @@ class Solution {
         //Output should be: [1,2,2,3,5,6]
     }
 
+    //Merge and sort arrays
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int j=0;
         for(int i =m;i<m+n;i++){
