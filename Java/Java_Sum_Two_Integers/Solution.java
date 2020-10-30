@@ -13,7 +13,7 @@ Output: 1
 
 import java.util.*;
 
-class Solution {
+public class Solution {
 
     public static void main(String[] args) {
         //create test case
