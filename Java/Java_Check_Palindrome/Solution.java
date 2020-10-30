@@ -34,9 +34,12 @@ class Solution {
   public static void main(String[] args) {
     //create randome test case
     int number = 10;
-    System.out.println("Check if " + number + "is palindrome: " + isPalindrome(10));
+    System.out.println("Check if " + number + " is palindrome: " + isPalindrome(number));
+
+    int numberPalindrome = 11;
+    System.out.println("Check if " + numberPalindrome + " is palindrome: " + isPalindrome(numberPalindrome));
   }
-  
+
   public static boolean isPalindrome(int x) {
     int reverse = 0;
     int checkx = x;
