@@ -12,6 +12,7 @@
 * [Class template specialization](https://www.hackerrank.com/challenges/cpp-class-template-specialization/problem)
 * [Coloring Balls]
 * [Cycle Detection](https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem)
+* [Deque-STL](https://www.hackerrank.com/challenges/deque-stl/problem)
 * [Jesse and Cookies](https://www.hackerrank.com/challenges/jesse-and-cookies/problem)
 * [Largest Bitcoin Subarray]
 * [Matrix](https://www.hackerrank.com/challenges/matrix/problem)
