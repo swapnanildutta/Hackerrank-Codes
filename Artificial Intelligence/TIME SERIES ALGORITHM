@@ -1,0 +1,56 @@
+# Market Size Forecasting Using Time Series Algorithm
+
+## Time Series Analysis:
+
+### One Variable: time.
+We try to predict here how the magnitude of the data varies with the time.
+
+### Component of Time Series Algorithm:
+Trend, Seasonality, Cyclic, Irregularity.
+
+### We should not use Time Series Algorithm: 
+When the value is constant or follows any function as a trigonometric function.
+
+### What is stationarity:
+Time series has a particular behaviour over time, & there is high probability it will follow it in future.
+
+### How to remove stationarity:
+Constant mean, constant variance (distance from the mean), auto variance that do not depend on time(the values at T-1, T-2 should not have any co-relation with them).
+
+### Tests to check Stationarity:
+1. Rolling statistics: Plot the moving variance or moving average & see if it varies with the time
+
+2. ADCF Test(dickey fuller test): Null Hypothesis is time series is non-stationary. The test result comprises of Test Statistic & Critical Values. If the test statistic<critical value, then we will reject the null hypotheis & say that TS is stationary.
+After checking the stationarity, if there is no stationarity in the model, ARIMA Model
+
+3. ARIMA(Autoregressive Integration Moving Average)=(p,d,q), where d = Order of integration, p = auto regressive lags, q = moving average, here p can be taken out by (PACF GRAPH) apache auto correlation graph, q can be taken out by auto correlation plot (ACF GRAPH), d by (OLS), ordinary least square method. Greater the RSS worse is the result of the Arima Model. RSS = ARIMA(p,d,q).
+
+### WE would follow the following process for Time Series Model:
+Obtaining the cumulative sum via cumsum(), ARIMA Model via predictions, calculate the value of it in exponent form.
+
+### ARIMA MODEL CODE PYTHON:
+
+```
+from pandas import read_csv
+from pandas import datetime
+from pandas import DataFrame
+from statsmodels.tsa.arima_model import ARIMA
+from matplotlib import pyplot
+
+def parser(x):
+	return datetime.strptime('190'+x, '%Y-%m')
+
+series = read_csv('sales.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
+# fit model
+model = ARIMA(series, order=(5,1,0))
+model_fit = model.fit(disp=0)
+print(model_fit.summary())
+# plot residual errors
+residuals = DataFrame(model_fit.resid)
+residuals.plot()
+pyplot.show()
+residuals.plot(kind='kde')
+pyplot.show()
+print(residuals.describe())
+```
+
