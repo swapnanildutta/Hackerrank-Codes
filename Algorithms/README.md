@@ -19,3 +19,5 @@ Solve Me First solved in Python
 Implementations
 - [Encryption](https://www.hackerrank.com/challenges/encryption/problem)
 
+Dynamic Programming
+- [Sherlock and Cost](https://www.hackerrank.com/challenges/sherlock-and-cost/problem)
